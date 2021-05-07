@@ -1,0 +1,52 @@
+$browser-prefixes: false !default;
+
+$placeholder-color-default: #ff6666;
+
+@font-face {
+	font-family: Supermolot_Light;
+	src: url(../fonts/TT-Supermolot-Condensed-Light.otf);
+}
+@font-face {
+	font-family: Supermolot_Regular;
+	src: url(../fonts/TT-Supermolot-Condensed-Regular.otf);
+}
+@font-face {
+	font-family: Supermolot_Bold;
+	src: url(../fonts/TT-Supermolot-Condensed-Bold.otf);
+}
+@font-face {
+	font-family: Supermolot_Black;
+	src: url(../fonts/TT-Supermolot-Condensed-Black.otf);
+}
+@font-face {
+	font-family: Supermolot_Black_Italic;
+	src: url(../fonts/TT-Supermolot-Condensed-Black-Italic.otf);
+}
+@font-face {
+	font-family: Chivo_Regular;
+	src: url(../fonts/Chivo-Regular.ttf);
+}
+@font-face {
+	font-family: Chivo_Bold;
+	src: url(../fonts/Chivo-Bold.ttf);
+}
+@font-face {
+	font-family: Chivo_Black;
+	src: url(../fonts/Chivo-Black.ttf);
+}
+@font-face {
+	font-family: Chivo_Black_Italic;
+	src: url(../fonts/Chivo-BlackItalic.ttf);
+}
+
+$font-bold: 'bold';
+$font-normal: 'normal';
+
+$font_heading: Supermolot_Black_Italic;
+$font_text: 'Open Sans',
+sans-serif;
+
+/*	============================== #Color ==================================== */
+
+$color_primary:#A7E42B;
+$gray_bg:#F2F2F2;

@@ -1,0 +1,82 @@
+.product {
+    .banner_content {
+        top: 30%;
+        @extend .rel_x_center;
+    }
+
+    .filters_featured {
+        padding-top: 3%;
+        padding-bottom: 3%;
+        display: flex;
+        justify-content: space-between;
+
+        .sort_text {
+            padding-right: 10px;
+            font-size: 23px;
+            line-height: 28px;
+            font-family: Supermolot_Regular;
+        }
+    }
+
+    .products_list {
+        flex-wrap: wrap;
+        .product_item {
+            position: relative;
+            margin-bottom: 5%;
+            padding: 30px 50px;
+            width: 32%;
+            background-color: white;
+            box-shadow: 0px 0px 20px 10px rgba(0,0,0,.1);
+            .new_tag{
+                position: absolute;
+                top: 80px;
+                right: -7px;
+            }
+            .product_title{
+                padding-top: 10px;
+                text-align: center;
+            }
+
+            .reviews {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                .stars {
+                    .checked {
+                        color: #FCD300;
+                    }
+                }
+
+                .review_text {
+                    font-size: 18px;
+                    line-height: 1;
+                    font-family: Chivo_Regular;
+                }
+            }
+
+            .cost {
+                display: flex;
+                justify-content: space-around;
+                font-size: 20px;
+                .strike{
+                    text-decoration: line-through;
+                }
+                .current_price{
+                    font-family: Chivo_Bold;
+                }
+            }
+        }
+    }
+
+    .btn_div{
+        text-align: center;
+        padding-bottom: 5%;
+    }
+    .faq{
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+}

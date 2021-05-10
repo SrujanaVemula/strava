@@ -69,6 +69,7 @@ $(document).ready(function (evt) {
     if (contactPage == 1) {
 
     }
+
 });
 
 //################################### window load function ##############################################
@@ -93,6 +94,15 @@ $(window).on('scroll', function (e) {
         }
     })
 
+    $(".section_title").each(function () {
+        var sectionTop = $(this).parent().offset().top;
+        sectionTop = Math.round(sectionTop);
+        console.log(scrollTopPos, sectionTop, scrollTopPos >= sectionTop);
+        if (scrollTopPos >= sectionTop) {
+            console.log("top", $(".faq").offset().top);
+            $(this).addClass("reached-top");
+        }
+    });
 });
 
 //################################### window resize function ###########################################

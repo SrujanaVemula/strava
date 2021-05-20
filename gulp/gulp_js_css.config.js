@@ -9,6 +9,7 @@ function jscss() {
 			// './src/css/animate.css',
 			'./src/css/slick.css',
 			'./src/css/slick-theme.css',
+			'./src/css/glider.min.css',
 			// './src/css/lightgallery.min.css',
 			// './src/css/smart_wizard.css',
 			'./src/css/fontawesome5.min.css',
@@ -17,13 +18,15 @@ function jscss() {
 
         js_path: [
             './src/js/vendor/jquery-1.11.2.min.js',
-//			'./src/js/vendor/jquery.validate.min.js',
-//			'./src/js/vendor/jquery.form.min.js',
+            './src/js/vendor/glider.min.js',
+			'./src/js/vendor/jquery.validate.min.js',
+			'./src/js/vendor/jquery.form.min.js',
 //			'./src/js/vendor/bootstrap.js',
 			'./src/js/vendor/slick.min.js',
+			'./src/js/vendor/scroll-out.js',
 			// './src/js/vendor/bound.js',
 			// './src/js/vendor/jquery-ui.min.js',
-			// './src/js/vendor/validator.min.js',
+			'./src/js/vendor/validator.min.js',
 //			'./src/js/vendor/owl.carousel.min.js',
 			// './src/js/vendor/wow.js',
 //			'./src/js/vendor/TweenMax.min.js',
@@ -42,8 +45,8 @@ function jscss() {
 
 			// Material Files
 
-//			'./src/js/vendor/materialize_js/velocity.min.js',
-//            './src/js/vendor/materialize_js/global.js',
+			'./src/js/vendor/materialize_js/velocity.min.js',
+           './src/js/vendor/materialize_js/global.js',
             // './src/js/vendor/materialize_js/collapsible.js',
             // './src/js/vendor/materialize_js/dropdown.js',
             // './src/js/vendor/materialize_js/modal.js',
@@ -56,7 +59,7 @@ function jscss() {
             // './src/js/vendor/materialize_js/sidenav.js',
             // './src/js/vendor/materialize_js/scrollspy.js',
             // './src/js/vendor/materialize_js/autocomplete.js',
-//             './src/js/vendor/materialize_js/forms.js',
+            './src/js/vendor/materialize_js/forms.js',
             // './src/js/vendor/materialize_js/slider.js',
             // './src/js/vendor/materialize_js/cards.js',
             // './src/js/vendor/materialize_js/chips.js',

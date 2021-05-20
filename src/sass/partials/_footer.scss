@@ -1,105 +1,250 @@
 footer {
-    padding: 0px 50px;
+    background-color: black;
+    padding-top: 3%;
+    padding-bottom: 1%;
 
-    @include lg-down {
-        padding: 0px 0px;
-    }
-
-    @include sm-down {
-        padding: 0px 15px;
-    }
-
-    .footer_inner {
-
-        @extend .f_r_a_center;
+    .logo_contact_section {
+        display: flex;
+        align-items: center;
         justify-content: space-between;
-        padding: 15px 15px 15px;
-        //        border-top: 1px solid #ddd;
-
-        &:after,
-        &:before {
-            display: none;
-        }
 
         @include sm-down {
             flex-direction: column;
         }
 
-        .copyright_text {
-            font-size: 18px;
-        }
-
-        .social_links {
+        .contact_section {
+            display: flex;
+            align-items: center;
             @include sm-down {
-                margin: 10px 0px;
+                flex-direction: column;
             }
 
-            .social_icons {
-                display: flex;
-                --dim: 40px;
+            .join_input {
+                .join_text {
+                    @extend .uppercase;
+                    font-size: 22px;
+                    line-height: 1;
+                    font-family: Chivo_Regular;
+                    color: white;
+                    padding-right: 30px;
+
+                    @include sm-down {
+                        padding-right: 0;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+
+            .green_btn {
+                cursor: unset;
+                padding-left: 30px;
+                font-family: Chivo_Regular;
+                text-transform: lowercase;
+                color: #707070;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    background-color: $color_primary;
+                    color: #707070;
+                }
+            }
+
+            .phone,
+            .mail {
+                padding-top: 20px;
+                padding-bottom: 20px;
 
                 @include sm-down {
-                    --dim: 30px;
+                    padding-top: 0;
+                    padding-bottom: 0;
                 }
 
                 a {
-                    width: var(--dim);
-                    height: var(--dim);
-                    font-size: 20px;
-                    text-align: center;
-                    line-height: var(--dim);
-                    border: 1px solid gray;
-                    border-radius: 50px;
-                    color: gray;
-                    margin: 0 5px;
+                    font-size: 18px;
+                    line-height: 40px;
+                    font-family: Chivo_Regular;
 
-                    @include sm-down {
-                        font-size: 14px;
+                    &:first-child {
+                        padding-right: 50px;
+
+                        @include sm-down {
+                            padding-right: 0;
+                        }
+                    }
+
+                    text-decoration: none;
+                    color: #979797;
+
+                    .contact_icon {
+                        padding-right: 10px;
+                        margin-bottom: -5px;
                     }
                 }
             }
         }
+    }
 
-        .made_by_ting_sec {
-            .ting-unit-wrap {
+    .footer_links_section {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5%;
+        padding-bottom: 5%;
+
+        @include sm-down {
+            // flex-direction: column;
+        }
+
+        .links_section {
+            .link_heading {
+                @extend .uppercase;
+                font-size: 28px;
+                line-height: 29px;
+                font-family: Supermolot_Regular;
+                color: white;
+                margin-bottom: 20px;
+            }
+
+            .footer_links {
+                display: block;
+                font-size: 18px;
+                line-height: 30px;
+                font-family: Chivo_Regular;
+                color: #979797;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .disclaimer {
+        .follow {
+            padding-left: 3%;
+            padding-right: 3%;
+            border-top: solid 1px white;
+            border-bottom: solid 1px white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+
+            @include sm-down {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .reserved_text {
+                font-size: 22px;
+                line-height: 27px;
+                font-family: Supermolot_Regular;
+
+                @include sm-down {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+
+            .follow_links {
                 display: flex;
-                justify-content: flex-end;
                 align-items: center;
-                transform: scale(0.7);
 
-                @include md-down {
-                    text-align: center;
-                    justify-content: center;
-                }
+                p {
+                    color: white;
+                    font-size: 22px;
+                    line-height: 27px;
+                    font-family: Supermolot_Regular;
+                    padding-right: 30px;
 
-                .made-by-text {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-end;
-
-                    p {
-                        color: white;
-                        font-weight: 700;
-                        font-family: Lato_Black;
-                        background-color: $color_primary;
-                        margin-bottom: 3px;
-                        padding: 2px 8px;
-                        border-radius: 3px;
-                        letter-spacing: 2px;
-                        font-size: 11px;
-                        text-transform: uppercase;
+                    @include sm-down {
+                        font-size: 16px;
+                        line-height: 20px;
+                        padding-right: 10px;
                     }
                 }
 
-                img {
-                    display: inline-block;
-                    vertical-align: middle;
-                    width: 90px;
-                    margin-left: 5px;
+                a {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    color: white;
+                }
+            }
+        }
 
-                    &.black-logo {
-                        filter: invert(1);
+        .disclaimer_text {
+            padding: 3%;
+            border-bottom: solid 1px white;
+
+            ol {
+                list-style: decimal;
+                padding-left: 20px;
+
+                li {
+                    &:last-child {
+                        margin-bottom: 0;
                     }
+
+                    color: #979797;
+                    font-size: 18px;
+                    line-height: 20px;
+                    font-family: Chivo_Regular;
+                    margin-bottom: 20px;
+
+                    @include sm-down {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .made_by_ting_sec {
+        padding-top: 2%;
+
+        .ting-unit-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include md-down {
+                text-align: center;
+            }
+
+            .made-by-text {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+                p {
+                    color: black;
+                    font-family: Chivo_Regular;
+                    background-color: $color_primary;
+                    margin-bottom: 3px;
+                    padding: 2px 8px;
+                    border-radius: 3px;
+                    letter-spacing: 2px;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    @include sm-down{
+                        font-size: 8px;
+                    }
+                }
+            }
+
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                width: 90px;
+                margin-left: 5px;
+                @include sm-down{
+                    width: 70px;
+                }
+
+                &.black-logo {
+                    filter: invert(1);
                 }
             }
         }

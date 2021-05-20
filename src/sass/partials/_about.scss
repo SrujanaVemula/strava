@@ -1,0 +1,186 @@
+.about {
+    overflow-x: hidden;
+    .about_detail {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .detail {
+            width: 45%;
+            @include md-down {
+                width: 100%;
+                &:nth-child(2){
+                    padding-top: 50px;
+                }
+            }
+            .section_title{
+                @include md-down{
+                padding-left: 20px;
+                padding-right: 20px;
+                }
+            }
+            .body1{
+                @include md-down{
+                    padding-top: 20px;
+                    }
+            }
+        }
+    }
+
+    .more_about_detail {
+        position: relative;
+        background-image: url("../../img/dotted_bg.png");
+        background-color: black;
+        margin: 8% 0;
+        .green_star{
+            position:absolute;
+            left: 25%;
+            bottom:-6%;
+            @include sm-down{
+                display: none;
+            }
+        }
+        .flex-container{
+            @include mv-media(768px,991px){
+                padding-top: 5%;
+                padding-bottom: 5%;
+            }
+        }
+
+        .flex-wrap {
+            display: flex;
+            justify-content: space-between;
+            @include sm-down {
+                flex-wrap: wrap;
+                padding-top: 5%;
+                padding-bottom: 5%;
+            }
+
+            &:first-child {
+                align-items: center;
+                .flex-item {
+                    margin-top: -60px;
+                    @include md-down{
+                        margin-top:0;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                padding-top: 50px;
+                align-items: flex-start;
+                @include sm-down{
+                    flex-direction: column-reverse;
+                }
+                .flex-item {
+                    margin-bottom: -60px;
+                    .detail_title{
+                        margin-top: 10%;
+                    }
+                    @include md-down{
+                        margin-bottom:0;
+                    }
+                }
+            }
+
+            .flex-item {
+                width: 48%; 
+                @include sm-down {
+                    width: 100%;
+                }
+
+                .detail_title {
+                    font-size: 32px;
+                    line-height: 45px;
+                    font-family: Supermolot_Bold;
+                    color: white;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    @extend .uppercase;
+                }
+
+                .body1 {
+                    color: white;
+
+                }
+            }
+        }
+    }
+    .founders{
+        position: relative;
+        padding-top: 3%;
+        padding-bottom: 10%;
+        @extend .text-center;
+        .slanting1{
+            position: absolute;
+            left: -166px;
+            top: 20%;
+            @include mv-media(768px,991px){
+                left: -260px;
+                top: 10%;
+            }
+            @include sm-down{
+                display: none;
+            }
+        }
+        .slanting2{
+            position: absolute;
+            bottom: 0;
+            right: -166px;
+            padding-bottom: 30px;
+            padding-top: 30px;
+            @include mv-media(768px,991px){
+                right: -260px;
+    padding-bottom: 8px;
+            }
+            @include sm-down{
+                display: none;
+            }
+        }
+        .white_star{
+            position: absolute;
+            top: 28%;
+            right:5%;
+            @include mv-media(768px,991px){
+                right: 2%;
+            }
+            @include sm-down{
+                display: none;
+            }
+        }
+        .founders_wrap{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            @include sm-down{
+                flex-wrap: wrap;
+            }
+            .founder_detail{
+                width: 45%;
+                padding-top: 5%;
+                @include sm-down{
+                    width: 100%;
+                    padding-top: 50px;
+                }
+                .founder_image{
+                    img{
+                        margin: 0 auto
+                    }
+                }
+                .founder_name{
+                    @extend .header3;
+                    @extend .uppercase;
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                    @include sm-down{
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

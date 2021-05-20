@@ -1,4 +1,5 @@
 var indexPage = $('#index_page').length;
+var productPage = $('.product').length;
 var contactPage = $('#contact_page').length;
 
 //====================================functions====================================
@@ -58,11 +59,35 @@ $(document).ready(function (evt) {
         $('#nav-icon3').trigger('click');
     })
 
+    ScrollOut();
+    
     console.log(`window width is ${winW}`);
 
     //=====================================index page script========================================
-    if (indexPage == 1) {
-
+    if (indexPage == 1 || productPage == 1) {
+        new Glider(document.querySelector('.tab'), {
+            slidesToScroll: 1,
+            slidesToShow: 'auto',
+            responsive: [{
+                // screens greater than >= 1024px
+                breakpoint: 1024,
+                settings: {
+                    // Set to `auto` and provide item width to adjust to viewport
+                    slidesToScroll: 1,
+                    slidesToShow: 'auto',
+                    draggable: true,
+                }
+            },{
+                // screens greater than >= 767px
+                breakpoint: 767,
+                settings: {
+                    // Set to `auto` and provide item width to adjust to viewport
+                    slidesToScroll: 1,
+                    slidesToShow: 'auto',
+                    draggable: true,
+                }
+            }]
+        })
     }
 
     //=====================================contact page script========================================
@@ -94,15 +119,13 @@ $(window).on('scroll', function (e) {
         }
     })
 
-    $(".section_title").each(function () {
-        var sectionTop = $(this).parent().offset().top;
-        sectionTop = Math.round(sectionTop);
-        console.log(scrollTopPos, sectionTop, scrollTopPos >= sectionTop);
-        if (scrollTopPos >= sectionTop) {
-            console.log("top", $(".faq").offset().top);
-            $(this).addClass("reached-top");
-        }
-    });
+    // $(".section_title").each(function () {
+    //     var sectionTop = $(this).parents(".section_title_div").offset().top;
+    //     sectionTop = Math.round(sectionTop);
+    //     if (scrollTopPos >= sectionTop) {
+    //         $(this).addClass("reached-top");
+    //     }
+    // });
 });
 
 //################################### window resize function ###########################################

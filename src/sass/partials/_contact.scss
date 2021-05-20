@@ -1,3 +1,57 @@
 #contact_page {
-    
+    background-color: $gray_bg;
+
+    .page_desc {
+        padding-top: 3%;
+        padding-bottom: 3%;
+
+        .bold {
+            font-family: Chivo_Bold;
+        }
+    }
+
+    .contact_info {
+        padding-top: 3%;
+        padding-bottom: 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include sm-down {
+            flex-wrap: wrap;
+        }
+
+        .wrap {
+            &:first-child {
+                a {
+                    margin-right: 50px;
+                    @include sm-down{
+                        padding-right: 20px;
+                    }
+                }
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: inherit;
+                font-size: 22px;
+                line-height: 26px;
+                font-family: Chivo_Regular;
+
+                @include sm-down {
+                    font-size: 16px;
+                    line-height: 18px;
+                    margin-bottom: 10px;
+                    img{
+                        margin-right: 10px;
+                    }
+                }
+
+                img {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
 }

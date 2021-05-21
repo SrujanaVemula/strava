@@ -11,6 +11,8 @@
 
 <head>
 	<?php include("includes/include_css.html") ?>
+	<?php include("includes/header.html") ?>
+	<?php include("includes/sidebar.html") ?>
 </head>
 
 <body>
@@ -133,8 +135,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="certification_img"><img src="img/home/certification_img.png" alt="Certification Image"
-					class="img-responsive"></div>
+			<div class="certification_img">
+				<picture>
+					<source media="(min-width:767px)" srcset="img/home/certification_img.png">
+					<img src="img/home/mobile_certification_img.png" alt="Certification Image" style="width:auto;">
+				</picture>
+			</div>
 			<div class="fitness_regime" data-scroll>
 				<div class="text-center">
 					<h2 class="section_title">CATALYSE YOUR <br><span class="transparent_text">FITNESS REGIME.</span>
@@ -1181,6 +1187,8 @@
 		</section>
 		<section class="about_us" data-scroll>
 			<img class="plus_sign" src="img/black_plus_img.svg" alt="Plus Image">
+			<img class="slant1" src="img/about/slanting_lines.png" alt="Slanting Image">
+			<img class="slant2" src="img/about/slanting_lines.png" alt="Slanting Image">
 			<div class="container">
 				<div class="text-center">
 					<h2 class="section_title">WHAT THEY’RE <br><span class="transparent_text">SAYING ABOUT US</span>
@@ -1360,6 +1368,7 @@
 		</section>
 	</main>
 	<!--  end body content -->
+	<?php include("includes/footer.html") ?>
 	<?php include("includes/include_js.html") ?>
 	<script>
 		$('.birthright_slider').slick({
@@ -1418,7 +1427,7 @@
 		});
 
 		$('.authenticate_slider').slick({
-			infinite: false,
+			infinite: true,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			arrows: false,
@@ -1427,7 +1436,7 @@
 		});
 
 		$('.step_slider').slick({
-			infinite: false,
+			infinite: true,
 			arrows: false,
 			slidesToShow: 2,
 			slidesToScroll: 1,

@@ -60,7 +60,7 @@ $(document).ready(function (evt) {
     })
 
     ScrollOut();
-    
+
     console.log(`window width is ${winW}`);
 
     //=====================================index page script========================================
@@ -77,7 +77,7 @@ $(document).ready(function (evt) {
                     slidesToShow: 'auto',
                     draggable: true,
                 }
-            },{
+            }, {
                 // screens greater than >= 767px
                 breakpoint: 767,
                 settings: {
@@ -95,6 +95,7 @@ $(document).ready(function (evt) {
 
     }
 
+    $(".mobile_navbar").css("top","26px");
 });
 
 //################################### window load function ##############################################
@@ -111,6 +112,13 @@ $(window).on('scroll', function (e) {
     //lazy loading images
     //html syntax below
     //<img data-lazy-src="path/to/image" alt="" class="">
+    if (winW <= 767) {
+        if (scrollTopPos > 100) { // this refers to window
+            $(".mobile_navbar").css("top","0");
+        }else{
+            $(".mobile_navbar").css("top","26px");
+        }
+    }
 
     $('img[data-lazy-src]').each(function () {
         var getOffsetTop = $(this).offset().top;

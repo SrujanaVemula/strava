@@ -27,6 +27,12 @@ html {
     }
 }
 
+main {
+    @include sm-down {
+        margin-top: 80px;
+    }
+}
+
 textarea {
     box-sizing: border-box;
 }
@@ -188,32 +194,60 @@ select {
     transform: translate(-50%, -50%);
 }
 
+.cart {
+    position: relative;
+
+    .cart_count {
+        padding-top: 2px;
+        padding-bottom: 2px;
+        font-size: 9px;
+        line-height: 14px;
+        font-family: Supermolot_Bold;
+        color: white;
+        text-align: center;
+        position: absolute;
+        right: 5px;
+        top: -10px;
+        width: 18px;
+        height: 18px;
+        background-color: #E12F29;
+        border-radius: 50%;
+
+        @include sm-down {
+            right: -5px;
+        }
+    }
+}
+
 .mobile_navbar {
     display: none;
     position: fixed;
     padding: 15px;
     background-color: black;
-    top: 0;
     left: 0;
     width: 100%;
     z-index: 101;
     box-shadow: 0px 0px 14px -10px #333;
-    height: 60px;
+    height: 80px;
 
     @include sm-down {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .navbar_logo {
-        @extend .rel_y_center;
         max-height: 50px;
     }
 }
 
+// .mobile_navbar > .open {
+//     top: 0 !important;
+// }
+
 #nav-icon3 {
     width: 24px;
     height: 18px;
-    left: 5%;
     margin-left: 10px;
     @extend .rel_y_center;
     transition: all 0.5s ease-out;
@@ -226,8 +260,6 @@ select {
 
     @include sm-down {
         left: 0;
-        margin-left: auto;
-        margin-top: 5px;
         top: 0px;
         transform: none;
         position: relative;
@@ -237,7 +269,6 @@ select {
         display: block;
         position: absolute;
         height: 2px;
-        width: 100%;
         background-color: white;
         border-radius: 9px;
         opacity: 1;
@@ -247,18 +278,22 @@ select {
 
         &:nth-child(1) {
             top: 0px;
+            width: 100%;
         }
 
         &:nth-child(2) {
             top: 7px;
+            width: 80%;
         }
 
         &:nth-child(3) {
             top: 7px;
+            width: 80%;
         }
 
         &:nth-child(4) {
             top: 14px;
+            width: 60%;
         }
     }
 
@@ -334,7 +369,7 @@ select {
 }
 
 .input-field label.error {
-    // top: calc(100% - 30px) !important;
+    bottom: -25px;
     font-size: 16px;
     color: red;
     //    left: unset!important;
@@ -342,9 +377,96 @@ select {
 }
 
 .input-field label.error.active {
-    // top: 40px !important;
-    // transform: translateY(10px) scale(1) !important;
-    // transform-origin: 0 0 !important;
+    bottom: -25px;
+    ~.placeholder_text {
+        top: -15px;
+        font-size: 16px;
+        line-height: 18px;
+
+        @include sm-down {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+    
+}
+
+.input-field {
+    position: relative;
+    width: 45%;
+    margin-bottom: 60px;
+
+    @include sm-down {
+        width: 100%;
+    }
+
+    label.error {
+        font-size: 16px;
+        color: red;
+        position: absolute;
+        left: 0;
+        bottom: -25px;
+    }
+
+    input {
+        background-color: transparent;
+        font-size: 22px;
+        line-height: 26px;
+        font-family: Chivo_Regular;
+        width: 100%;
+        height: 40px;
+        border: 0;
+        border-bottom: solid 1px #707070;
+
+        @include sm-down {
+            font-size: 18px;
+            line-height: 20px;
+            height: 20px;
+        }
+
+        &.valid {
+            ~.placeholder_text {
+                top: -15px;
+                font-size: 16px;
+                line-height: 18px;
+
+                @include sm-down {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
+
+        &:focus {
+            outline: none;
+
+            ~.placeholder_text {
+                top: -15px;
+                font-size: 16px;
+                line-height: 18px;
+
+                @include sm-down {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+
+    .placeholder_text {
+        transition: ease all 300ms;
+        font-size: 22px;
+        line-height: 26px;
+        font-family: Chivo_Regular;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        @include sm-down {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
 }
 
 .f_r_aj_center {
@@ -916,6 +1038,7 @@ select::-ms-expand {
         }
     }
 }
+
 .tab_item {
     padding-right: 50px;
     min-width: unset;
@@ -1102,84 +1225,6 @@ select::-ms-expand {
     }
 }
 
-.input-field {
-    position: relative;
-    width: 45%;
-    margin-bottom: 60px;
-    
-    @include sm-down {
-        width: 100%;
-    }
-    
-    label.error {
-        font-size: 16px;
-        color: red;
-        position: absolute;
-        left: 0;
-        bottom: -25px;
-    }
-    
-    input {
-        background-color: transparent;
-        font-size: 22px;
-        line-height: 26px;
-        font-family: Chivo_Regular;
-        width: 100%;
-        height: 40px;
-        border: 0;
-        border-bottom: solid 1px #707070;
-
-        @include sm-down {
-            font-size: 18px;
-            line-height: 20px;
-            height: 20px;
-        }
-
-        &.valid{
-            ~.placeholder_text {
-                top: -15px;
-                font-size: 16px;
-                line-height: 18px;
-
-                @include sm-down {
-                    font-size: 14px;
-                    line-height: 16px;
-                }
-            }
-        }
-
-        &:focus {
-            outline: none;
-
-            ~.placeholder_text {
-                top: -15px;
-                font-size: 16px;
-                line-height: 18px;
-
-                @include sm-down {
-                    font-size: 14px;
-                    line-height: 16px;
-                }
-            }
-        }
-    }
-
-    .placeholder_text {
-        transition: ease all 300ms;
-        font-size: 22px;
-        line-height: 26px;
-        font-family: Chivo_Regular;
-        position: absolute;
-        left: 0;
-        top: 0;
-
-        @include sm-down {
-            font-size: 16px;
-            line-height: 18px;
-        }
-    }
-}
-
 .enquiry_form {
     position: relative;
     background-color: white;
@@ -1238,4 +1283,20 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+.hidden-md {
+    display: none;
+
+    @include sm-down {
+        display: block;
+    }
+}
+
+.hidden-xs {
+    display: block;
+
+    @include sm-down {
+        display: none !important;
+    }
 }

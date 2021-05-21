@@ -3,6 +3,32 @@ footer {
     padding-top: 3%;
     padding-bottom: 1%;
 
+    @include sm-down {
+        padding: 5%;
+    }
+
+    .follow_links {
+        p {
+            color: white;
+            font-size: 22px;
+            line-height: 27px;
+            font-family: Supermolot_Regular;
+            padding-right: 30px;
+
+            @include sm-down {
+                font-size: 16px;
+                line-height: 20px;
+                padding-right: 10px;
+            }
+        }
+
+        a {
+            margin-left: 10px;
+            margin-right: 10px;
+            color: white;
+        }
+    }
+
     .logo_contact_section {
         display: flex;
         align-items: center;
@@ -10,13 +36,15 @@ footer {
 
         @include sm-down {
             flex-direction: column;
+            align-items: flex-start;
         }
 
         .contact_section {
             display: flex;
             align-items: center;
+
             @include sm-down {
-                flex-direction: column;
+                display: block
             }
 
             .join_input {
@@ -67,6 +95,11 @@ footer {
                     line-height: 40px;
                     font-family: Chivo_Regular;
 
+                    @include sm-down {
+                        font-size: 14px;
+                        line-height: 30px;
+                    }
+
                     &:first-child {
                         padding-right: 50px;
 
@@ -94,10 +127,38 @@ footer {
         padding-bottom: 5%;
 
         @include sm-down {
-            // flex-direction: column;
+            flex-wrap: wrap
         }
 
         .links_section {
+            @include md-down {
+                width: 50%;
+                margin-bottom: 20px;
+            }
+
+            @include sm-down {
+                .green_btn {
+                    width: 100%;
+                    padding-left: 10px;
+                    padding-right: 10px;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &:hover {
+                        background-color: $color_primary;
+                        color: #707070;
+                    }
+                }
+
+                .join_text {
+                    text-transform: uppercase;
+                    color: white;
+                    margin-bottom: 10px;
+                }
+            }
+
             .link_heading {
                 @extend .uppercase;
                 font-size: 28px;
@@ -105,6 +166,12 @@ footer {
                 font-family: Supermolot_Regular;
                 color: white;
                 margin-bottom: 20px;
+
+                @include md-down {
+                    font-size: 14px;
+                    line-height: 18px;
+                    margin-bottom: 10px;
+                }
             }
 
             .footer_links {
@@ -114,6 +181,11 @@ footer {
                 font-family: Chivo_Regular;
                 color: #979797;
                 text-decoration: none;
+
+                @include md-down {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
             }
         }
     }
@@ -134,6 +206,8 @@ footer {
             @include sm-down {
                 padding-left: 0;
                 padding-right: 0;
+                flex-direction: column;
+                align-items: flex-start;
             }
 
             .reserved_text {
@@ -142,8 +216,8 @@ footer {
                 font-family: Supermolot_Regular;
 
                 @include sm-down {
-                    font-size: 18px;
-                    line-height: 22px;
+                    font-size: 16px;
+                    line-height: 19px;
                 }
             }
 
@@ -151,24 +225,8 @@ footer {
                 display: flex;
                 align-items: center;
 
-                p {
-                    color: white;
-                    font-size: 22px;
-                    line-height: 27px;
-                    font-family: Supermolot_Regular;
-                    padding-right: 30px;
-
-                    @include sm-down {
-                        font-size: 16px;
-                        line-height: 20px;
-                        padding-right: 10px;
-                    }
-                }
-
-                a {
-                    margin-left: 10px;
-                    margin-right: 10px;
-                    color: white;
+                @include sm-down {
+                    margin: 10px 0;
                 }
             }
         }
@@ -176,6 +234,10 @@ footer {
         .disclaimer_text {
             padding: 3%;
             border-bottom: solid 1px white;
+
+            @include sm-down {
+                padding: 3% 0;
+            }
 
             ol {
                 list-style: decimal;
@@ -196,6 +258,25 @@ footer {
                         font-size: 12px;
                         line-height: 14px;
                     }
+                }
+            }
+        }
+    }
+
+    .end_footer {
+        @include sm-down {
+            display: flex;
+            justify-content: space-between;
+
+            .follow_links {
+                p {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+
+                a {
+                    margin-left: 0;
+                    margin-right: 10px;
                 }
             }
         }
@@ -228,7 +309,8 @@ footer {
                     letter-spacing: 2px;
                     font-size: 11px;
                     text-transform: uppercase;
-                    @include sm-down{
+
+                    @include sm-down {
                         font-size: 8px;
                     }
                 }
@@ -239,7 +321,8 @@ footer {
                 vertical-align: middle;
                 width: 90px;
                 margin-left: 5px;
-                @include sm-down{
+
+                @include sm-down {
                     width: 70px;
                 }
 

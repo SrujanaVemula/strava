@@ -11,6 +11,8 @@
 
 <head>
     <?php include("includes/include_css.html") ?>
+	<?php include("includes/header.html") ?>
+	<?php include("includes/sidebar.html") ?>
 </head>
 
 <body>
@@ -570,6 +572,7 @@
         </section>
     </main>
     <!--  end body content -->
+	<?php include("includes/footer.html") ?>
     <?php include("includes/include_js.html") ?>
     <script>
         $(".accordian_content").first().slideDown();

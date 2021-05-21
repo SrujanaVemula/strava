@@ -46,7 +46,7 @@
                 display: block;
                 position: absolute;
                 right: 0;
-                top: 30%;
+                top: 54%;
                 z-index: 1;
                 width: 8%;
             }
@@ -59,7 +59,7 @@
                 display: block;
                 position: absolute;
                 left: 0;
-                top: 5%;
+                top: 32%;
                 z-index: 1;
                 width: 8%;
             }
@@ -212,7 +212,11 @@
 
     .about_lab {
         position: relative;
-        padding: 5%;
+        padding: 8% 5% 5% 5%;
+
+        @include sm-down {
+            padding: 15% 5% 10%;
+        }
 
         .star_img {
             position: absolute;
@@ -231,7 +235,9 @@
             }
 
             @include sm-down {
-                display: none;
+                left: 5%;
+                top: -5%;
+                width: 20%;
             }
         }
 
@@ -317,6 +323,17 @@
             flex-wrap: wrap;
         }
 
+        @include sm-down {
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
+
+        .section_title {
+            @include sm-down {
+                padding-bottom: 5%;
+            }
+        }
+
         .title_div {
             width: 50%;
 
@@ -346,7 +363,11 @@
         background-color: black;
         margin-bottom: 22%;
 
-        @include md-down {
+        @include sm-down {
+            margin-bottom: 70%;
+        }
+
+        @include mv-media(768px, 991px) {
             margin-bottom: 0;
         }
 
@@ -365,7 +386,7 @@
 
             @include md-down {
                 width: 8%;
-                top: -28%;
+                top: -20%;
                 left: 0;
             }
         }
@@ -379,9 +400,16 @@
             transform: translateY(-50%);
             margin-top: 15%;
 
-            @include md-down {
+            @include mv-media(768px, 991px) {
                 margin-top: 20%;
                 margin-bottom: -15%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            @include sm-down {
+                margin-top: 20%;
+                margin-bottom: 0;
                 padding-left: 0;
                 padding-right: 0;
             }
@@ -402,12 +430,20 @@
                         @extend .text-center;
                         height: 100px;
 
-                        @include md-down {
+                        @include mv-media(768px, 991px) {
                             height: 80px;
+                        }
+
+                        @include sm-down {
+                            height: 40px;
                         }
 
                         img {
                             margin: 0 auto;
+
+                            @include sm-down {
+                                width: 40px;
+                            }
                         }
                     }
 
@@ -439,6 +475,11 @@
             height: 10px;
             background: rgb(233, 233, 233);
             background: linear-gradient(180deg, rgba(233, 233, 233, 1) 0%, rgba(226, 226, 226, 1) 20%, rgba(174, 174, 174, 1) 50%, rgba(168, 168, 168, 1) 60%, rgba(184, 180, 180, 1) 90%, rgba(165, 165, 165, 1) 100%);
+
+            @include sm-down {
+                top: -10px;
+                height: 5px;
+            }
         }
 
         &:after {
@@ -450,6 +491,11 @@
             height: 10px;
             background: rgb(233, 233, 233);
             background: linear-gradient(180deg, rgba(233, 233, 233, 1) 0%, rgba(226, 226, 226, 1) 20%, rgba(174, 174, 174, 1) 50%, rgba(168, 168, 168, 1) 60%, rgba(184, 180, 180, 1) 90%, rgba(165, 165, 165, 1) 100%);
+
+            @include sm-down {
+                bottom: -10px;
+                height: 5px;
+            }
         }
 
         @keyframes marquee {
@@ -503,6 +549,12 @@
     .certification_img {
         position: relative;
         z-index: 1;
+        text-align: center;
+
+        @include sm-down {
+            padding-top: 7%;
+            text-align: center;
+        }
 
         img {
             margin: 0 auto;
@@ -642,6 +694,11 @@
         background-image: url(../../img/home/authenticate_bg.jpg);
         padding-top: 5%;
         padding-bottom: 5%;
+
+        @include sm-down {
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
 
         .section_title {
             @include mv-media(768px, 1024px) {
@@ -845,6 +902,11 @@
         padding-top: 5%;
         padding-bottom: 5%;
 
+        @include sm-down {
+            padding-top: 15%;
+            padding-bottom: 13%;
+        }
+
         .img_section {
             padding-top: 5%;
             display: flex;
@@ -860,15 +922,15 @@
                 margin-bottom: 1%;
 
                 @include md-down {
-                    margin-bottom: 2%;
-                    width: 49%;
+                    margin-bottom: 5%;
+                    width: 48%;
                 }
 
                 &:first-child {
                     width: 46%;
 
                     @include md-down {
-                        width: 49%;
+                        width: 48%;
                     }
                 }
 
@@ -877,7 +939,7 @@
                     width: 46%;
 
                     @include md-down {
-                        width: 49%;
+                        width: 48%;
                     }
                 }
 
@@ -937,6 +999,11 @@
         background-image: url("../../img/dotted_bg.png");
         background-color: black;
         padding-top: 5%;
+
+        @include sm-down {
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
 
         .story_wrap {
             transform: translateY(25%);
@@ -1082,8 +1149,9 @@
                     color: white;
 
                     .right_arrow {
-                        fill: white;
-                        -webkit-fill: white;
+                        @include sm-down {
+                            filter: invert(1);
+                        }
                     }
                 }
 
@@ -1104,7 +1172,12 @@
         padding-top: 18%;
         padding-bottom: 5%;
 
-        @include md-down {
+        @include sm-down {
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
+
+        @include mv-media(768px, 991px) {
             padding-top: 5%;
         }
 
@@ -1114,12 +1187,38 @@
 
         .plus_sign {
             position: absolute;
-            top: 68%;
-            right: 23%;
+            top: 35%;
+            right: 15%;
 
             @include md-down {
-                top: 60%;
+                top: 50%;
                 right: 90%;
+            }
+        }
+
+        .slant1 {
+            position: absolute;
+            left: -200px;
+            top: 45%;
+
+            @include sm-down {
+                top: 25%;
+                left: 0;
+                width: 44%;
+                z-index: 1;
+            }
+        }
+
+        .slant2 {
+            position: absolute;
+            bottom: 0;
+            right: -8.5%;
+
+            @include sm-down {
+                top: 40%;
+                right: 0;
+                width: 44%;
+                z-index: 1;
             }
         }
 
@@ -1209,6 +1308,11 @@
     .get_transformed {
         padding-top: 5%;
         padding-bottom: 3%;
+
+        @include sm-down {
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
 
         .transforming_images {
             padding-top: 5%;

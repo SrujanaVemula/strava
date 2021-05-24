@@ -1,4 +1,12 @@
 .career {
+    .inside_box{
+        background-color: $gray_bg;
+        select{
+            &:focus{
+                outline: none;
+            }
+        }
+    }
     .work_with_us {
         padding-top: 5%;
         padding-bottom: 5%;

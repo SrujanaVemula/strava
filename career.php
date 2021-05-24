@@ -11,12 +11,12 @@
 
 <head>
     <?php include("includes/include_css.html") ?>
-	<?php include("includes/header.html") ?>
-	<?php include("includes/sidebar.html") ?>
 </head>
 
 <body>
     <?php include("includes/browser_upgrade.html") ?>
+    <?php include("includes/header.html") ?>
+    <?php include("includes/sidebar.html") ?>
 
     <main id="career" class="smooth_scroll_pages career">
         <!--  insert body content  -->
@@ -59,10 +59,14 @@
                 <div class="opening_dropdown_wrap">
                     <h4 class="openings_title">Current openings</h4>
                     <div class="filters dropdown_wrap">
-                        <img src="img/product/filter.svg" class="filter_img">
-                        <select name="state" class="browser-default uppercase dropdown" id="stateId">
-                            <option value="">show filters</option>
-                        </select>
+                        <div class="black_bg">
+                            <div class="inside_box">
+                                <img src="img/product/filter.svg" class="filter_img">
+                                <select name="state" class="browser-default uppercase dropdown" id="stateId">
+                                    <option value="">show filters</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="scrollable_table">
@@ -115,7 +119,7 @@
         </section>
     </main>
     <!--  end body content -->
-	<?php include("includes/footer.html") ?>
+    <?php include("includes/footer.html") ?>
     <?php include("includes/include_js.html") ?>
 </body>
 

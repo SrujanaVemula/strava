@@ -48,6 +48,8 @@ footer {
             }
 
             .join_input {
+                width: 35%;
+
                 .join_text {
                     @extend .uppercase;
                     font-size: 22px;
@@ -63,20 +65,24 @@ footer {
                 }
             }
 
-            .green_btn {
-                cursor: unset;
-                padding-left: 30px;
-                font-family: Chivo_Regular;
-                text-transform: lowercase;
-                color: #707070;
-
-                &:focus {
-                    outline: none;
-                }
-
-                &:hover {
-                    background-color: $color_primary;
+            .form_input {
+                width: 65%;
+                .green_btn {
+                    width: 100%;
+                    cursor: unset;
+                    padding-left: 30px;
+                    font-family: Chivo_Regular;
+                    text-transform: lowercase;
                     color: #707070;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &:hover {
+                        background-color: $color_primary;
+                        color: #707070;
+                    }
                 }
             }
 

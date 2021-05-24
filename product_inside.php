@@ -11,12 +11,12 @@
 
 <head>
     <?php include("includes/include_css.html") ?>
-	<?php include("includes/header.html") ?>
-	<?php include("includes/sidebar.html") ?>
 </head>
 
 <body>
     <?php include("includes/browser_upgrade.html") ?>
+    <?php include("includes/header.html") ?>
+    <?php include("includes/sidebar.html") ?>
 
     <main id="product_inside" class="smooth_scroll_pages product">
         <!--  insert body content  -->
@@ -93,10 +93,14 @@
                     <div class="more_info align_bottom">
                         <div class="quantity">
                             <p class="body1 uppercase">Quantity</p>
-                            <div class="add_remove">
-                                <span>-</span>
-                                <span>04</span>
-                                <span>+</span>
+                            <div class="black_bg">
+                                <div class="inside_box">
+                                    <div class="add_remove">
+                                        <span>-</span>
+                                        <span>04</span>
+                                        <span>+</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <button class="green_btn">Add to cart</button>
@@ -572,7 +576,7 @@
         </section>
     </main>
     <!--  end body content -->
-	<?php include("includes/footer.html") ?>
+    <?php include("includes/footer.html") ?>
     <?php include("includes/include_js.html") ?>
     <script>
         $(".accordian_content").first().slideDown();

@@ -11,12 +11,12 @@
 
 <head>
     <?php include("includes/include_css.html") ?>
-	<?php include("includes/header.html") ?>
-	<?php include("includes/sidebar.html") ?>
 </head>
 
 <body>
     <?php include("includes/browser_upgrade.html") ?>
+	<?php include("includes/header.html") ?>
+	<?php include("includes/sidebar.html") ?>
 
     <main id="about" class="smooth_scroll_pages about">
         <!--  insert body content  -->

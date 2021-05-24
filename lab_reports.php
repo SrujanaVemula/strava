@@ -11,12 +11,12 @@
 
 <head>
     <?php include("includes/include_css.html") ?>
-	<?php include("includes/header.html") ?>
-	<?php include("includes/sidebar.html") ?>
 </head>
 
 <body>
     <?php include("includes/browser_upgrade.html") ?>
+    <?php include("includes/header.html") ?>
+    <?php include("includes/sidebar.html") ?>
 
     <main id="lab_reports" class="smooth_scroll_pages lab_reports">
         <section class="lab_reports_section" data-scroll>
@@ -24,23 +24,28 @@
                 <h2 class="section_title">LAB</br><span class="transparent_text">REPORTS</span></h2>
             </div>
             <div class="about_lab">
-                <div class="section_clip_big">
-                    <div class="flex-wrap">
-                        <div class="flex-item">
-                            <div class="icon"><img src="img/lab/lab1.svg" alt="No. 1 Gainer & Protein"></div>
-                            <p class="icon_desc">Product is authentic and each product contains scratch code so
-                                authentication is provided by scratch code verification only.</p>
-                        </div>
-                        <div class="flex-item">
-                            <div class="icon"><img src="img/lab/lab2.svg" alt="Most Trusted Amino Acid"></div>
-                            <p class="icon_desc">During Analysis, due to inherent variation in the analytical procedure
-                                and lab environment there may be variation of 5-6% in the actual result stated on the
-                                label claim.</p>
-                        </div>
-                        <div class="flex-item">
-                            <div class="icon"><img src="img/lab/lab3.svg" alt="4,00,000+ Happy Customers"></div>
-                            <p class="icon_desc">All Products are tested in NABL and ISO certified (ISO 9001:2015) lab
-                                for protein content.</p>
+                <div class="outside_section_clip">
+                    <div class="section_clip_big">
+                        <div class="flex-wrap">
+                            <div class="flex-item">
+                                <div class="icon"><img src="img/lab/lab1.svg" alt="No. 1 Gainer & Protein"></div>
+                                <p class="icon_desc">Product is authentic and each product contains scratch code so
+                                    authentication is provided by scratch code verification only.</p>
+                            </div>
+                            <div class="flex-item">
+                                <div class="icon"><img src="img/lab/lab2.svg" alt="Most Trusted Amino Acid"></div>
+                                <p class="icon_desc">During Analysis, due to inherent variation in the analytical
+                                    procedure
+                                    and lab environment there may be variation of 5-6% in the actual result stated on
+                                    the
+                                    label claim.</p>
+                            </div>
+                            <div class="flex-item">
+                                <div class="icon"><img src="img/lab/lab3.svg" alt="4,00,000+ Happy Customers"></div>
+                                <p class="icon_desc">All Products are tested in NABL and ISO certified (ISO 9001:2015)
+                                    lab
+                                    for protein content.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -141,7 +146,7 @@
         </section>
     </main>
     <!--  end body content -->
-	<?php include("includes/footer.html") ?>
+    <?php include("includes/footer.html") ?>
     <?php include("includes/include_js.html") ?>
 </body>
 

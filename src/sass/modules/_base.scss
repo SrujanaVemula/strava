@@ -324,17 +324,18 @@ select {
 
 .sidebar_wrap {
     position: fixed;
-    width: 100%;
+    width: 75%;
     top: 0;
     left: 0;
     padding: 50px 15px;
     background-color: white;
-    display: flex;
-    align-items: center;
-    z-index: 100;
+    // display: flex;
+    // align-items: center;
+    z-index: 102;
     height: 100vh;
     transform: translateX(-100%);
     transition: all 0.5s ease-out;
+    padding: 0 10px 5%;
 
     @include sm-up {
         display: none;
@@ -348,14 +349,66 @@ select {
         display: flex;
         flex-direction: column;
         flex: 1;
-        align-items: center;
 
-        a {
-            @extend .rem_link_style;
-            font-size: 22px;
-            font-weight: 700;
+        .link {
+            border-bottom: solid 1px lightgray;
+            padding: 13px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            i {
+                font-size: 20px;
+            }
+
+            a {
+                @extend .rem_link_style;
+                font-size: 16px;
+                line-height: 18px;
+                font-family: Supermolot_Bold;
+                text-transform: uppercase;
+
+                .icon {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .offer_box {
+        transition: ease all 300ms;
+        position: relative;
+        margin-top: 10%;
+        background-color: black;
+        padding: 15% 17%;
+
+        .transparent_img {
+            width: 20%;
+            position: absolute;
+            right: 5px;
+            top: -15px;
+        }
+
+        .green_img {
+            position: absolute;
+            left: 5%;
+            width: 20%;
+            bottom: -30px;
+        }
+
+        .white_cancel {
+            filter: invert(1);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 20px;
+            font-family: Supermolot_Bold;
             text-transform: uppercase;
-            padding: 10px 0px;
+            color: white;
         }
     }
 }
@@ -378,6 +431,7 @@ select {
 
 .input-field label.error.active {
     bottom: -25px;
+
     ~.placeholder_text {
         top: -15px;
         font-size: 16px;
@@ -388,7 +442,7 @@ select {
             line-height: 16px;
         }
     }
-    
+
 }
 
 .input-field {
@@ -744,6 +798,13 @@ select::-ms-expand {
 }
 
 .section_clip_big {
+    @extend .clip-rect-big;
+}
+
+.outside_section_clip {
+    padding: 10px;
+    background: rgb(187, 186, 186);
+    background: linear-gradient(180deg, rgba(187, 186, 186, 1) 0%, rgba(230, 230, 230, 1) 25%, rgba(142, 141, 141, 1) 60%, rgba(190, 190, 190, 1) 80%, rgba(116, 116, 116, 1) 100%);
     @extend .clip-rect-big;
 }
 
@@ -1298,5 +1359,19 @@ input[type=number] {
 
     @include sm-down {
         display: none !important;
+    }
+}
+
+.black_bg {
+    background-color: black;
+    -webkit-clip-path: polygon(0 0, calc(100% - var(--clip_space)) 0, 100% var(--clip_space), 100% 100%, var(--clip_space) 100%, 0 calc(100% - var(--clip_space)));
+    clip-path: polygon(0 0, calc(100% - var(--clip_space)) 0, 100% var(--clip_space), 100% 100%, var(--clip_space) 100%, 0 calc(100% - var(--clip_space)));
+    padding: 1px;
+
+    .inside_box {
+        background-color: white;
+        -webkit-clip-path: polygon(0 0, calc(100% - var(--clip_space)) 0, 100% var(--clip_space), 100% 100%, var(--clip_space) 100%, 0 calc(100% - var(--clip_space)));
+        clip-path: polygon(0 0, calc(100% - var(--clip_space)) 0, 100% var(--clip_space), 100% 100%, var(--clip_space) 100%, 0 calc(100% - var(--clip_space)));
+        // padding: 5%;
     }
 }

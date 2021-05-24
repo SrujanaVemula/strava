@@ -11,12 +11,12 @@
 
 <head>
 	<?php include("includes/include_css.html") ?>
-	<?php include("includes/header.html") ?>
-	<?php include("includes/sidebar.html") ?>
 </head>
 
 <body>
 	<?php include("includes/browser_upgrade.html") ?>
+	<?php include("includes/header.html") ?>
+	<?php include("includes/sidebar.html") ?>
 
 	<main id="index_page" class="smooth_scroll_pages">
 		<!--  insert body content  -->
@@ -45,27 +45,29 @@
 		</section>
 		<section class="about_lab">
 			<img class="star_img" src="img/lab/star.svg" alt="Star Image">
-			<div class="section_clip_big">
-				<div class="flex-wrap">
-					<div class="flex-item">
-						<div class="icon"><img src="img/home/protein-powder.svg" alt="No. 1 Gainer & Protein"></div>
-						<h4 class="icon_title">No. 1 Gainer & Protein</h4>
-						<p class="icon_desc">Brand on Amazon.in</p>
-					</div>
-					<div class="flex-item">
-						<div class="icon"><img src="img/home/05-security.svg" alt="Most Trusted Amino Acid"></div>
-						<h4 class="icon_title">Most Trusted Amino Acid</h4>
-						<p class="icon_desc">Supplements on Amazon.in</p>
-					</div>
-					<div class="flex-item">
-						<div class="icon"><img src="img/home/rating.svg" alt="4,00,000+ Happy Customers"></div>
-						<h4 class="icon_title">4,00,000+</h4>
-						<p class="icon_desc">Happy Customers</p>
-					</div>
-					<div class="flex-item">
-						<div class="icon"><img src="img/home/delivery-truck.svg" alt="Free Express Delivery"></div>
-						<h4 class="icon_title">Free Express Delivery</h4>
-						<p class="icon_desc">on Prepaid Orders</p>
+			<div class="outside_section_clip">
+				<div class="section_clip_big">
+					<div class="flex-wrap">
+						<div class="flex-item">
+							<div class="icon"><img src="img/home/protein-powder.svg" alt="No. 1 Gainer & Protein"></div>
+							<h4 class="icon_title">No. 1 Gainer & Protein</h4>
+							<p class="icon_desc">Brand on Amazon.in</p>
+						</div>
+						<div class="flex-item">
+							<div class="icon"><img src="img/home/05-security.svg" alt="Most Trusted Amino Acid"></div>
+							<h4 class="icon_title">Most Trusted Amino Acid</h4>
+							<p class="icon_desc">Supplements on Amazon.in</p>
+						</div>
+						<div class="flex-item">
+							<div class="icon"><img src="img/home/rating.svg" alt="4,00,000+ Happy Customers"></div>
+							<h4 class="icon_title">4,00,000+</h4>
+							<p class="icon_desc">Happy Customers</p>
+						</div>
+						<div class="flex-item">
+							<div class="icon"><img src="img/home/delivery-truck.svg" alt="Free Express Delivery"></div>
+							<h4 class="icon_title">Free Express Delivery</h4>
+							<p class="icon_desc">on Prepaid Orders</p>
+						</div>
 					</div>
 				</div>
 			</div>

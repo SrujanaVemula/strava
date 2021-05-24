@@ -82,23 +82,27 @@
                         padding-top: 10px;
                         justify-content: space-between;
                     }
-                    &.flavour_size{
-                        @include mv-media(768px,1024px){
+
+                    &.flavour_size {
+                        @include mv-media(768px, 1024px) {
                             flex-wrap: wrap;
                         }
+
                         @include sm-down {
                             flex-wrap: wrap;
                         }
                     }
 
                     .flavour {
-                        .cmn_btn{
+                        .cmn_btn {
                             min-width: 260px;
                             margin-right: 50px;
                         }
-                        @include mv-media(768px,1024px){
+
+                        @include mv-media(768px, 1024px) {
                             width: 95%;
                         }
+
                         @include sm-down {
                             width: 95%;
 
@@ -110,16 +114,19 @@
                     }
 
                     .size {
-                        .cmn_btn{
+                        .cmn_btn {
                             min-width: 200px;
-                            select{
+
+                            select {
                                 padding-left: 70px;
                             }
                         }
-                        @include mv-media(768px,1024px){
+
+                        @include mv-media(768px, 1024px) {
                             width: 95%;
                             margin-top: 20px;
                         }
+
                         @include sm-down {
                             width: 95%;
                             padding-top: 10px;
@@ -141,7 +148,7 @@
                         margin-top: 10px;
                         text-align: right;
 
-                        select{
+                        select {
                             background-color: transparent;
                         }
 
@@ -184,9 +191,6 @@
                         .add_remove {
                             display: flex;
                             align-items: center;
-                            border: solid 1px black;
-                            margin-top: 10px;
-                            // @extend .clip-rect;
 
                             span {
                                 padding: 5px 20px;
@@ -204,7 +208,8 @@
                         .green_btn {
                             margin-left: 50px;
                             @extend .uppercase;
-                            @include sm-down{
+
+                            @include sm-down {
                                 margin-left: 20px;
                             }
                         }
@@ -232,7 +237,8 @@
                             transition: ease all 300ms;
                             color: $color_primary;
                             margin: 5px 10px;
-                            @include sm-down{
+
+                            @include sm-down {
                                 font-size: 1.5em;
                                 margin: 5px;
                             }
@@ -279,7 +285,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                @include mv-media(992px,1024px){
+
+                @include mv-media(992px, 1024px) {
                     flex-wrap: wrap;
                     padding: 0 5%;
                 }
@@ -292,9 +299,11 @@
                 .header1 {
                     color: white;
                     width: 45%;
-                    @include mv-media(992px,1024px){
+
+                    @include mv-media(992px, 1024px) {
                         width: 100%;
                     }
+
                     @include md-down {
                         width: 100%;
                     }
@@ -303,7 +312,8 @@
                 .benefits {
                     width: 30%;
                     list-style: disc;
-                    @include mv-media(992px,1024px){
+
+                    @include mv-media(992px, 1024px) {
                         width: 50%;
                     }
 
@@ -344,6 +354,7 @@
             .products_list {
                 padding-top: 5%;
                 align-items: center;
+
                 @include sm-down {
                     justify-content: center;
                 }
@@ -388,7 +399,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                @include mv-media(992px,1024px){
+
+                @include mv-media(992px, 1024px) {
                     padding-top: 3%;
                 }
 
@@ -397,7 +409,8 @@
                     line-height: 34px;
                     font-family: Supermolot_Bold;
                     @extend .uppercase;
-                    @include sm-down{
+
+                    @include sm-down {
                         font-size: 20px;
                         line-height: 22px;
                     }
@@ -405,7 +418,8 @@
 
                 .green_btn {
                     margin-left: 50px;
-                    @include sm-down{
+
+                    @include sm-down {
                         margin-left: 20px;
                     }
                 }
@@ -455,11 +469,23 @@
         flex-wrap: wrap;
         justify-content: space-between;
 
+        .black_bg{
+            @include sm-down{
+                width: 100%;
+            }
+        }
+
         .dropdown_wrap {
             position: relative;
 
             @include sm-down {
                 width: 100%;
+            }
+
+            .dropdown {
+                &:focus {
+                    outline: none;
+                }
             }
 
             .filter_img {
@@ -482,13 +508,14 @@
         }
 
         .featured {
+            display: flex;
+            align-items: center;
+
             @include sm-down {
-                display: flex;
-                align-items: center;
                 margin-top: 20px;
 
                 .dropdown {
-                    width: 88%;
+                    width: 100%;
                 }
             }
         }

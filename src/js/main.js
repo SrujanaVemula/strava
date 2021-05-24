@@ -57,7 +57,11 @@ $(document).ready(function (evt) {
     // force click on nav-menu when any link is clicked
     $('.sidebar_wrap .links a').on('click', function () {
         $('#nav-icon3').trigger('click');
-    })
+    });
+
+    $(".white_cancel").click(function(){
+        $(this).parents(".offer_box").css("opacity","0");
+    });
 
     ScrollOut();
 

@@ -11,12 +11,12 @@
 
 <head>
     <?php include("includes/include_css.html") ?>
-	<?php include("includes/header.html") ?>
-	<?php include("includes/sidebar.html") ?>
 </head>
 
 <body>
     <?php include("includes/browser_upgrade.html") ?>
+    <?php include("includes/header.html") ?>
+    <?php include("includes/sidebar.html") ?>
 
     <main id="product_listing" class="smooth_scroll_pages product">
         <!--  insert body content  -->
@@ -37,18 +37,26 @@
         </section>
         <section class="container">
             <div class="filters_featured">
-                <div class="filters dropdown_wrap">
-                    <img src="img/product/filter.svg" class="filter_img">
-                    <select name="state" class="browser-default uppercase dropdown" id="stateId">
-                        <option value="">show filters</option>
-                    </select>
+                <div class="black_bg">
+                    <div class="inside_box">
+                        <div class="filters dropdown_wrap">
+                            <img src="img/product/filter.svg" class="filter_img">
+                            <select name="state" class="browser-default uppercase dropdown" id="stateId">
+                                <option value="">show filters</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div class="featured dropdown_wrap">
                     <img src="img/product/featured.svg" class="filter_img">
                     <span class="uppercase sort_text">sort: </span>
-                    <select name="state" class="browser-default uppercase dropdown" id="stateId">
-                        <option value="">featured</option>
-                    </select>
+                    <div class="black_bg">
+                        <div class="inside_box">
+                            <select name="state" class="browser-default uppercase dropdown" id="stateId">
+                                <option value="">featured</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -252,7 +260,7 @@
                     </div>
 
                     <div id="amino_acids" class="tabcontent">
-                    <h3 class="header3 title">About Proteins and Gainers</h3>
+                        <h3 class="header3 title">About Proteins and Gainers</h3>
                         <p class="body1">Our fast-paced lifestyles and food habits have made holistic nutrition next to
                             impossible. No matter how healthy a diet we’re on, we definitely miss out on some or the
                             other essential nutrients, especially when the diet is complemented with a fitness regime.
@@ -286,7 +294,7 @@
                     </div>
 
                     <div id="performance" class="tabcontent">
-                    <h3 class="header3 title">About Proteins and Gainers</h3>
+                        <h3 class="header3 title">About Proteins and Gainers</h3>
                         <p class="body1">Our fast-paced lifestyles and food habits have made holistic nutrition next to
                             impossible. No matter how healthy a diet we’re on, we definitely miss out on some or the
                             other essential nutrients, especially when the diet is complemented with a fitness regime.
@@ -320,7 +328,7 @@
                     </div>
 
                     <div id="weight_management" class="tabcontent">
-                    <h3 class="header3 title">About Proteins and Gainers</h3>
+                        <h3 class="header3 title">About Proteins and Gainers</h3>
                         <p class="body1">Our fast-paced lifestyles and food habits have made holistic nutrition next to
                             impossible. No matter how healthy a diet we’re on, we definitely miss out on some or the
                             other essential nutrients, especially when the diet is complemented with a fitness regime.
@@ -354,7 +362,7 @@
                     </div>
 
                     <div id="gym_accessories" class="tabcontent">
-                    <h3 class="header3 title">About Proteins and Gainers</h3>
+                        <h3 class="header3 title">About Proteins and Gainers</h3>
                         <p class="body1">Our fast-paced lifestyles and food habits have made holistic nutrition next to
                             impossible. No matter how healthy a diet we’re on, we definitely miss out on some or the
                             other essential nutrients, especially when the diet is complemented with a fitness regime.
@@ -427,7 +435,7 @@
         </section>
     </main>
     <!--  end body content -->
-	<?php include("includes/footer.html") ?>
+    <?php include("includes/footer.html") ?>
     <?php include("includes/include_js.html") ?>
     <script>
         $(".accordian_content").first().slideDown();

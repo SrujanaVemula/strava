@@ -16,6 +16,7 @@
 <body>
     <?php include("includes/browser_upgrade.html") ?>
     <?php include("includes/header.html") ?>
+    <?php include("includes/sidebar.html") ?>
 
     <!--  insert body content  -->
     <main id="authentication" class="smooth_scroll_pages authentication" data-scroll>
@@ -35,42 +36,70 @@
                         <img class="star_img" src="img/auth_star.svg" alt="Star Image">
                         <div class="section_clip_big">
                             <h2 class="header2">LOOK FOR UNIQUE CODE UNDER THE CAP.</h2>
-                            <p class="enter_text">ENTER UNIQUE CODE</p>
-                            <form class="code_form" autocomplete="off" novalidate>
-                                <div class="code_input">
-                                    <input name="code" maxlength="1" />
-                                    <input maxlength="1" />
-                                    <input maxlength="1" />
-                                    <input maxlength="1" />
-                                    <input maxlength="1" />
-                                    <input maxlength="1" />
-                                    <input maxlength="1" />
-                                    <input maxlength="1" />
+                            <div class="code_wrap_section">
+                                <p class="enter_text">ENTER UNIQUE CODE</p>
+                                <form class="code_form" autocomplete="off" novalidate>
+                                    <div class="code_input">
+                                        <input name="code" maxlength="1" />
+                                        <input maxlength="1" />
+                                        <input maxlength="1" />
+                                        <input maxlength="1" />
+                                        <input maxlength="1" />
+                                        <input maxlength="1" />
+                                        <input maxlength="1" />
+                                        <input maxlength="1" />
+                                    </div>
+                                    <div class="input_wrap">
+                                        <div class="input-field">
+                                            <input id="phone" type="number" name="phone" class="validate">
+                                            <label class="placeholder_text" for="phone">Mobile Number</label>
+                                        </div>
+                                        <div class="input-field">
+                                            <input id="email" type="email" name="email" class="validate">
+                                            <label class="placeholder_text" for="email">Email Address</label>
+                                        </div>
+                                    </div>
+                                    <h2 class="header2">Purchased From</h2>
+                                    <div class="input_wrap">
+                                        <div class="input-field">
+                                            <select id="purchased" name="purchased" class="validate"
+                                                value="Please select from below options" required>
+                                                <option>Please select from below options</option>
+                                                <option>Option 1</option>
+                                                <option>Option 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="btn_div">
+                                            <input class="green_btn" type="submit" value="verify">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- <div class="congratulations">
+                                <p class="congartulations_msg">Congratulations your product with code MNXXV4RK is authenticated successfully.<br><a href="http://www.advancemusclemass.com/">www.advancemusclemass.com</a></p>
+                                <div class="product_detail">
+                                    <div class="product_detail_text">
+                                        <p class="title">Product Code: </p><p class="desc">MNXXV4RK</p>
+                                    </div>
+                                    <div class="product_detail_text">
+                                        <p class="title">Product Name: </p><p class="desc">ADVANCE MUSCLEMASS WEIGHT GAINER( VANILLA, 1KG)</p>
+                                    </div>
+                                    <div class="product_detail_text">
+                                        <p class="title">Batch Number: </p><p class="desc">AM21248</p>
+                                    </div>
+                                    <div class="product_detail_text">
+                                        <p class="title">Date of Manufacturing: </p><p class="desc">APR-2021</p>
+                                    </div>
                                 </div>
-                                <div class="input_wrap">
-                                    <div class="input-field">
-                                        <input id="phone" type="number" name="phone" class="validate">
-                                        <label class="placeholder_text" for="phone">Mobile Number</label>
-                                    </div>
-                                    <div class="input-field">
-                                        <input id="email" type="email" name="email" class="validate">
-                                        <label class="placeholder_text" for="email">Email Address</label>
-                                    </div>
+                                <div class="text-center btn_div"><button class="green_btn">Authenticate again</button></div>
+                            </div> -->
+                            <!-- <div class="error">
+                                <p class="error_msg">Sorry!!! your product with code MNXXV4RK is already verified or invalid. For any query, Please contact to our customer care number <a href="tel:917698430406">+91 7698430406</a></p>
+                                <div class="product_detail">
+                                    <p class="product_detail_text">If Problem in authentication please call on our customer care number <br><span class="bold"><a href="tel:917698430406">+91 7698430406</a> or mail on <a href="mailto:stravakart@hgmail.com">stravakart@hgmail.com</a></span></p>
                                 </div>
-                                <h2 class="header2">Purchased From</h2>
-                                <div class="input_wrap">
-                                    <div class="input-field">
-                                        <select id="purchased" name="purchased" class="validate" value="Please select from below options" required>
-                                            <option>Please select from below options</option>
-                                            <option>Option 1</option>
-                                            <option>Option 2</option>
-                                        </select>
-                                    </div>
-                                    <div class="btn_div">
-                                        <input class="green_btn" type="submit" value="verify">
-                                    </div>
-                                </div>
-                            </form>
+                                <div class="text-center btn_div"><button class="green_btn">Authenticate again</button></div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -106,7 +135,7 @@
             $t = $(this);
             if ($t.val().length > 0) {
                 $t.next().focus();
-            }else{
+            } else {
                 $t.prev().focus();
             }
         });

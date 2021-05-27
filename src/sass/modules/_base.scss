@@ -1375,3 +1375,17 @@ input[type=number] {
         // padding: 5%;
     }
 }
+
+[data-scroll] {
+    transition: all 1s ease-out;
+}
+
+[data-scroll="in"] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-scroll="out"] {
+    opacity: 0;
+    transform: translateY(100px);
+}

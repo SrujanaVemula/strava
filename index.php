@@ -43,7 +43,7 @@
 				<div class="image"><img src="img/home/slider_img.jpg" class="slider_img" alt="Slider Image"></div>
 			</div>
 		</section>
-		<section class="about_lab">
+		<section class="about_lab" data-scroll>
 			<img class="star_img" src="img/lab/star.svg" alt="Star Image">
 			<div class="outside_section_clip">
 				<div class="section_clip_big">
@@ -92,7 +92,7 @@
 		<section class="certification">
 			<img src="img/home/4slanting_lines.svg" alt="Four Slanting Lines" class="four_slanting">
 			<div class="radial_overlay"></div>
-			<div class="container">
+			<div class="container" data-scroll>
 				<div class="features">
 					<div class="feature_item">
 						<div class="section_filter">
@@ -123,7 +123,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="marquee_section">
+			<div class="marquee_section" data-scroll>
 				<div class="marquee_text_wrap">
 					<div class="marquee_text">
 						<h2 class="section_title">OUR<span class="transparent_text">CERTIFICATION</span></h2>
@@ -137,19 +137,19 @@
 					</div>
 				</div>
 			</div>
-			<div class="certification_img">
+			<div class="certification_img" data-scroll>
 				<picture>
 					<source media="(min-width:767px)" srcset="img/home/certification_img.png">
 					<img src="img/home/mobile_certification_img.png" alt="Certification Image" style="width:auto;">
 				</picture>
 			</div>
-			<div class="fitness_regime" data-scroll>
-				<div class="text-center">
+			<div class="fitness_regime">
+				<div class="text-center" data-scroll>
 					<h2 class="section_title">CATALYSE YOUR <br><span class="transparent_text">FITNESS REGIME.</span>
 					</h2>
 				</div>
 				<div class="tab_section">
-					<div class="tab">
+					<div class="tab" data-scroll>
 						<div class="tab_item" data-tab="#protein_gainers">
 							<button class="tablinks cmn_btn active"><span class="btn_text">Proteins &
 									Gainers</span></button>
@@ -167,7 +167,7 @@
 							<button class="tablinks cmn_btn"><span class="btn_text">Gym Accessories</span></button>
 						</div>
 					</div>
-					<div class="tab_content_wrap">
+					<div class="tab_content_wrap" data-scroll>
 						<div id="protein_gainers" class="tabcontent active">
 							<div class="container">
 								<p class="para body1">Our protein supplements and gainers deliver just the right amount
@@ -997,10 +997,10 @@
 				</div>
 			</div>
 		</section>
-		<section class="authenticate" data-scroll>
+		<section class="authenticate">
 			<div class="container">
 				<div class="authenticate_desc">
-					<div class="content">
+					<div class="content" data-scroll>
 						<h2 class="section_title">AUTHENTICATE<br><span class="transparent_text">YOUR PRODUCT</span>
 						</h2>
 						<p class="body1"><span class="bold">BEWARE</span> of the duplicate products you may get in the
@@ -1015,7 +1015,7 @@
 							<button class="green_btn">explore our range</button>
 						</div>
 					</div>
-					<div class="slider">
+					<div class="slider" data-scroll>
 						<div class="section_clip_big">
 							<p class="check">how can I check if my<span><img src="img/home/muscle_mass.svg"
 										alt="advance muscle mass" class="muscle_mass"></span></p>
@@ -1053,90 +1053,90 @@
 				</div>
 			</div>
 		</section>
-		<section class="aspiration" data-scroll>
-			<div class="text-center">
+		<section class="aspiration">
+			<div class="text-center" data-scroll>
 				<h2 class="section_title">A SOLUTION FOR <br><span class="transparent_text">EVERY ASPIRATION</span></h2>
 			</div>
 			<div class="container">
 				<div class="img_section">
-					<div class="image" style="background-image:url(img/home/body_building.jpg);">
+					<div class="image" style="background-image:url(img/home/body_building.jpg);" data-scroll>
 						<div class="green_overlay"></div>
 						<div class="plus_icon"><img src="img/home/plus_with_green.svg" class="img-responsive"></div>
 						<div class="overlay"></div>
 						<h4 class="img_title">BODY BUILDING</h4>
 						<!-- <img src="img/home/body_building.jpg" class="img-responsive product_img"> -->
 					</div>
-					<div class="image" style="background-image:url(img/home/healthy_body.jpg);">
+					<div class="image" style="background-image:url(img/home/healthy_body.jpg);" data-scroll>
 						<div class="green_overlay"></div>
 						<div class="plus_icon"><img src="img/home/plus_with_green.svg" class="img-responsive"></div>
 						<div class="overlay"></div>
 						<h4 class="img_title">HEALTHY BODY</h4>
 						<!-- <img src="img/home/healthy_body.jpg" class="img-responsive product_img"> -->
 					</div>
-					<div class="image" style="background-image:url(img/home/meal_replacement.jpg);">
+					<div class="image" style="background-image:url(img/home/meal_replacement.jpg);" data-scroll>
 						<div class="green_overlay"></div>
 						<div class="plus_icon"><img src="img/home/plus_with_green.svg" class="img-responsive"></div>
 						<div class="overlay"></div>
 						<h4 class="img_title">MEAL REPLACEMENT</h4>
 						<!-- <img src="img/home/meal_replacement.jpg" class="img-responsive product_img"> -->
 					</div>
-					<div class="image" style="background-image:url(img/home/weight_up.jpg);">
+					<div class="image" style="background-image:url(img/home/weight_up.jpg);" data-scroll>
 						<div class="green_overlay"></div>
 						<div class="plus_icon"><img src="img/home/plus_with_green.svg" class="img-responsive"></div>
 						<div class="overlay"></div>
 						<h4 class="img_title">WEIGHT UP</h4>
 						<!-- <img src="img/home/weight_up.jpg" class="img-responsive product_img"> -->
 					</div>
-					<div class="image" style="background-image:url(img/home/immunity_booster.jpg);">
+					<div class="image" style="background-image:url(img/home/immunity_booster.jpg);" data-scroll>
 						<div class="green_overlay"></div>
 						<div class="plus_icon"><img src="img/home/plus_with_green.svg" class="img-responsive"></div>
 						<div class="overlay"></div>
 						<h4 class="img_title">IMMUNITY BOOSTER</h4>
 						<!-- <img src="img/home/immunity_booster.jpg" class="img-responsive product_img"> -->
 					</div>
-					<div class="image" style="background-image:url(img/home/building_muscle.jpg);">
+					<div class="image" style="background-image:url(img/home/building_muscle.jpg);" data-scroll>
 						<div class="green_overlay"></div>
 						<div class="plus_icon"><img src="img/home/plus_with_green.svg" class="img-responsive"></div>
 						<div class="overlay"></div>
 						<h4 class="img_title">BUILDING MUSCLE</h4>
 						<!-- <img src="img/home/building_muscle.jpg" class="img-responsive product_img"> -->
 					</div>
-					<div class="image" style="background-image:url(img/home/body_building.jpg);">
+					<div class="image" style="background-image:url(img/home/body_building.jpg);" data-scroll>
 						<div class="green_overlay"></div>
 						<div class="plus_icon"><img src="img/home/plus_with_green.svg" class="img-responsive"></div>
 						<div class="overlay"></div>
 						<h4 class="img_title">BODY BUILDING</h4>
 						<!-- <img src="img/home/body_building.jpg" class="img-responsive product_img"> -->
 					</div>
-					<div class="image" style="background-image:url(img/home/healthy_body.jpg);">
+					<div class="image" style="background-image:url(img/home/healthy_body.jpg);" data-scroll>
 						<div class="green_overlay"></div>
 						<div class="plus_icon"><img src="img/home/plus_with_green.svg" class="img-responsive"></div>
 						<div class="overlay"></div>
 						<h4 class="img_title">HEALTHY BODY</h4>
 						<!-- <img src="img/home/healthy_body.jpg" class="img-responsive product_img"> -->
 					</div>
-					<div class="image" style="background-image:url(img/home/meal_replacement.jpg);">
+					<div class="image" style="background-image:url(img/home/meal_replacement.jpg);" data-scroll>
 						<div class="green_overlay"></div>
 						<div class="plus_icon"><img src="img/home/plus_with_green.svg" class="img-responsive"></div>
 						<div class="overlay"></div>
 						<h4 class="img_title">MEAL REPLACEMENT</h4>
 						<!-- <img src="img/home/meal_replacement.jpg" class="img-responsive product_img"> -->
 					</div>
-					<div class="image" style="background-image:url(img/home/weight_up.jpg);">
+					<div class="image" style="background-image:url(img/home/weight_up.jpg);" data-scroll>
 						<div class="green_overlay"></div>
 						<div class="plus_icon"><img src="img/home/plus_with_green.svg" class="img-responsive"></div>
 						<div class="overlay"></div>
 						<h4 class="img_title">WEIGHT UP</h4>
 						<!-- <img src="img/home/weight_up.jpg" class="img-responsive product_img"> -->
 					</div>
-					<div class="image" style="background-image:url(img/home/immunity_booster.jpg);">
+					<div class="image" style="background-image:url(img/home/immunity_booster.jpg);" data-scroll>
 						<div class="green_overlay"></div>
 						<div class="plus_icon"><img src="img/home/plus_with_green.svg" class="img-responsive"></div>
 						<div class="overlay"></div>
 						<h4 class="img_title">IMMUNITY BOOSTER</h4>
 						<!-- <img src="img/home/immunity_booster.jpg" class="img-responsive product_img"> -->
 					</div>
-					<div class="image" style="background-image:url(img/home/building_muscle.jpg);">
+					<div class="image" style="background-image:url(img/home/building_muscle.jpg);" data-scroll>
 						<div class="green_overlay"></div>
 						<div class="plus_icon"><img src="img/home/plus_with_green.svg" class="img-responsive"></div>
 						<div class="overlay"></div>
@@ -1146,19 +1146,19 @@
 				</div>
 			</div>
 		</section>
-		<section class="our_story" data-scroll>
+		<section class="our_story">
 			<div class="radial_overlay"></div>
 			<div class="story_wrap">
 				<div class="container">
-					<div class="text-center">
+					<div class="text-center" data-scroll>
 						<h2 class="section_title">OUR <br><span class="transparent_text">STORY</span></h2>
 					</div>
 					<div class="football_man">
-						<p class="story_desc">Advance MuscleMass started off with one single goal – democratize fitness
+						<p class="story_desc" data-scroll>Advance MuscleMass started off with one single goal – democratize fitness
 							and make bespoke fitness products accessible to everyone. We’re one of the first Indian
 							players to produce and distribute indigenous fitness supplements, manufactured entirely in
 							India. </p>
-						<div class="main_img">
+						<div class="main_img" data-scroll>
 							<img src="img/home/man_with_football.jpg" class="img-responsive"
 								alt="Man With Football Image">
 							<div class="overlay"></div>
@@ -1176,7 +1176,7 @@
 						<img class="bordered_slanting_lines" src="img/home/bordered_slanting_lines.svg"
 							alt="Bordered Slanting Lines Image">
 					</div>
-					<div class="explore_btns">
+					<div class="explore_btns" data-scroll>
 						<a href="javascript:void(0);" class="cmn_link">Learn more<span><img src="img/right-arrow.svg"
 									alt="Right Arrow" class="right_arrow"></span></a>
 						<a href="javascript:void(0);" class="cmn_link">explore our range<span><img
@@ -1187,16 +1187,16 @@
 				</div>
 			</div>
 		</section>
-		<section class="about_us" data-scroll>
+		<section class="about_us">
 			<img class="plus_sign" src="img/black_plus_img.svg" alt="Plus Image">
 			<img class="slant1" src="img/about/slanting_lines.png" alt="Slanting Image">
 			<img class="slant2" src="img/about/slanting_lines.png" alt="Slanting Image">
 			<div class="container">
-				<div class="text-center">
+				<div class="text-center" data-scroll>
 					<h2 class="section_title">WHAT THEY’RE <br><span class="transparent_text">SAYING ABOUT US</span>
 					</h2>
 				</div>
-				<div class="testimonial_slider">
+				<div class="testimonial_slider" data-scroll>
 					<div class="slider_content">
 						<div class="image_rating">
 							<div class="image"><img class="test_img" src="img/home/testimonial_image.png"
@@ -1292,13 +1292,13 @@
 				</div>
 			</div>
 		</section>
-		<section class="get_transformed" data-scroll>
+		<section class="get_transformed">
 			<div class="container">
-				<div class="text-center">
+				<div class="text-center" data-scroll>
 					<h2 class="section_title">#GETYOURSELF<br><span class="transparent_text">TRANSFORMED</span></h2>
 				</div>
 				<div class="transforming_images">
-					<div class="transformed_img">
+					<div class="transformed_img" data-scroll>
 						<div class="overlay"></div>
 						<div class="hover_text">
 							<span class="icon"><i class="fab fa-instagram fa-2x"></i></span>
@@ -1306,7 +1306,7 @@
 						</div>
 						<img class="img-responsive test_img" src="img/home/transformed1.jpg" alt="Transformed Image">
 					</div>
-					<div class="transformed_img">
+					<div class="transformed_img" data-scroll>
 						<div class="overlay"></div>
 						<div class="hover_text">
 							<span class="icon"><i class="fab fa-instagram fa-2x"></i></span>
@@ -1314,7 +1314,7 @@
 						</div>
 						<img class="img-responsive test_img" src="img/home/transformed2.jpg" alt="Transformed Image">
 					</div>
-					<div class="transformed_img">
+					<div class="transformed_img" data-scroll>
 						<div class="overlay"></div>
 						<div class="hover_text">
 							<span class="icon"><i class="fab fa-instagram fa-2x"></i></span>
@@ -1322,7 +1322,7 @@
 						</div>
 						<img class="img-responsive test_img" src="img/home/transformed3.jpg" alt="Transformed Image">
 					</div>
-					<div class="transformed_img">
+					<div class="transformed_img" data-scroll>
 						<div class="overlay"></div>
 						<div class="hover_text">
 							<span class="icon"><i class="fab fa-instagram fa-2x"></i></span>
@@ -1330,7 +1330,7 @@
 						</div>
 						<img class="img-responsive test_img" src="img/home/transformed4.jpg" alt="Transformed Image">
 					</div>
-					<div class="transformed_img">
+					<div class="transformed_img" data-scroll>
 						<div class="overlay"></div>
 						<div class="hover_text">
 							<span class="icon"><i class="fab fa-instagram fa-2x"></i></span>
@@ -1338,7 +1338,7 @@
 						</div>
 						<img class="img-responsive test_img" src="img/home/transformed5.jpg" alt="Transformed Image">
 					</div>
-					<div class="transformed_img">
+					<div class="transformed_img" data-scroll>
 						<div class="overlay"></div>
 						<div class="hover_text">
 							<span class="icon"><i class="fab fa-instagram fa-2x"></i></span>
@@ -1346,7 +1346,7 @@
 						</div>
 						<img class="img-responsive test_img" src="img/home/transformed6.jpg" alt="Transformed Image">
 					</div>
-					<div class="transformed_img">
+					<div class="transformed_img" data-scroll>
 						<div class="overlay"></div>
 						<div class="hover_text">
 							<span class="icon"><i class="fab fa-instagram fa-2x"></i></span>
@@ -1354,7 +1354,7 @@
 						</div>
 						<img class="img-responsive test_img" src="img/home/transformed7.jpg" alt="Transformed Image">
 					</div>
-					<div class="transformed_img">
+					<div class="transformed_img" data-scroll>
 						<div class="overlay"></div>
 						<div class="hover_text">
 							<span class="icon"><i class="fab fa-instagram fa-2x"></i></span>
@@ -1363,7 +1363,7 @@
 						<img class="img-responsive test_img" src="img/home/transformed8.jpg" alt="Transformed Image">
 					</div>
 				</div>
-				<div class="text-center">
+				<div class="text-center" data-scroll>
 					<button class="green_btn">load more</button>
 				</div>
 			</div>

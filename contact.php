@@ -37,9 +37,9 @@
         </section>
         <section class="page_desc">
             <div class="container">
-                <p class="body1"><span class="bold">Have any suggestions, feedback or concerns? </span><br> Share it
+                <p class="body1" data-scroll><span class="bold">Have any suggestions, feedback or concerns? </span><br> Share it
                     with us by filling out the form below. Also, you could reach out to us at</p>
-                <form class="m_form enquiry_form" id="enquiry-form" method="post">
+                <form class="m_form enquiry_form" id="enquiry-form" method="post" data-scroll>
                     <img src="img/home/4slanting_lines.svg" alt="Slanting Lines" class="slanting_lines">
                     <img src="img/transparent_star.svg" alt="Plus" class="plus">
                     <div class="input-field">
@@ -60,7 +60,7 @@
                     </div>
                     <div class="btn_div"><input class="green_btn" type="submit" value="Submit"></div>
                 </form>
-                <div class="contact_info">
+                <div class="contact_info" data-scroll>
                     <div class="wrap phone"><a href="tel:91 76984 30406"><img src="img/phone.svg">+91 76984 30406</a></div>
                     <div class="wrap mail"><a href="mailto:info@advancemusclemass.com"><img src="img/mail.svg">info@advancemusclemass.com</a></div>
                 </div>

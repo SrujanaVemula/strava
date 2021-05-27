@@ -36,15 +36,15 @@
             </div>
         </section>
         <section class="container">
-            <div class="about_detail" data-scroll>
-                <div class="detail">
+            <div class="about_detail">
+                <div class="detail" data-scroll>
                     <h2 class="section_title">OUR</br><span class="transparent_text">STORY</span></h2>
                     <p class="body1">Born in 2016 with the sole motive of making fitness accessible to all, Advance
                         MuscleMass has since then pioneered quality, indigenous fitness supplements in India. Our vision
                         is to enable a stronger, healthier and fitter India through wholesome nutritional supplements.
                     </p>
                 </div>
-                <div class="detail">
+                <div class="detail" data-scroll>
                     <h2 class="section_title">QUALITY AT</br><span class="transparent_text">THE CORE</span></h2>
                     <p class="body1">Our commitment to holistic fitness forms the backbone of Advance MuscleMass. Goes
                         without saying that we are a bunch of passionate innovators with a knack for creating
@@ -59,7 +59,7 @@
             <div class="radial_overlay"></div>
             <div class="container">
                 <div class="flex-container">
-                    <div class="flex-wrap">
+                    <div class="flex-wrap" data-scroll>
                         <div class="flex-item">
                             <img src="img/about/detail1.png" alt="Detail Image" class="img-responsive">
                         </div>
@@ -72,7 +72,7 @@
                                 Amazon.in.</p>
                         </div>
                     </div>
-                    <div class="flex-wrap">
+                    <div class="flex-wrap" data-scroll>
                         <div class="flex-item">
                             <h3 class="detail_title">Value for money</h3>
                             <p class="body1">At Advance MuscleMass, it is our sole purpose to democratize high-quality

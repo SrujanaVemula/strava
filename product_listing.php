@@ -37,7 +37,7 @@
         </section>
         <section class="container">
             <div class="filters_featured">
-                <div class="black_bg">
+                <div class="black_bg" data-scroll>
                     <div class="inside_box">
                         <div class="filters dropdown_wrap">
                             <img src="img/product/filter.svg" class="filter_img">
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="featured dropdown_wrap">
+                <div class="featured dropdown_wrap" data-scroll>
                     <img src="img/product/featured.svg" class="filter_img">
                     <span class="uppercase sort_text">sort: </span>
                     <div class="black_bg">
@@ -60,9 +60,8 @@
                 </div>
             </div>
         </section>
-
         <section class="container">
-            <div class="products_list">
+            <div class="products_list" data-scroll>
                 <div class="section_filter product_width">
                     <div class="section_clip">
                         <div class="product_item">
@@ -205,7 +204,7 @@
             </div>
         </section>
         <section class="tab_section">
-            <div class="tab">
+            <div class="tab" data-scroll>
                 <div class="tab_item" data-tab="#protein_gainers">
                     <button class="tablinks cmn_btn active"><span class="btn_text">Proteins &
                             Gainers</span></button>
@@ -223,7 +222,7 @@
                     <button class="tablinks cmn_btn"><span class="btn_text">Gym Accessories</span></button>
                 </div>
             </div>
-            <div class="tab_content_wrap">
+            <div class="tab_content_wrap" data-scroll>
                 <div class="container">
                     <div id="protein_gainers" class="tabcontent active">
                         <h3 class="header3 title">About Proteins and Gainers</h3>

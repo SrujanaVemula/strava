@@ -54,7 +54,7 @@
         <section class="reports_table">
             <div class="container">
                 <img class="star_img" src="img/lab/star.svg" alt="Star Image">
-                <div class="filters_featured">
+                <div class="filters_featured" data-scroll>
                     <div class="filters dropdown_wrap">
                         <p class="text">Show entries</p>
                         <div class="select rel_item">
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="scrollable_table">
+                <div class="scrollable_table" data-scroll>
                     <table class="cmn_table">
                         <tr>
                             <th>Sr.no.</th>
@@ -132,7 +132,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="previous_next">
+                <div class="previous_next" data-scroll>
                     <p class="next_text">Show entries 1 to <span class="bold">6</span> of <span class="bold">8</span>
                         enteries</p>
                     <div class="prev_next_wrap">

@@ -22,15 +22,15 @@
     <main id="authentication" class="smooth_scroll_pages authentication" data-scroll>
         <section class="authentication_desc">
             <div class="container">
-                <div class="text-center">
+                <div class="text-center"data-scroll>
                     <h2 class="section_title">PRODUCT<br><span class="transparent_text">AUTHENTICATION</span></h2>
                 </div>
-                <div class="img_text_wrap">
+                <div class="img_text_wrap"data-scroll>
                     <img src="img/scratch_card_img.png" class="img-responsive" alt="Scratch Card Image">
                     <h2 class="header2 desc1">Scratch and enter<br>this code only</h2>
                     <h2 class="header2 desc2">This is not a <br>scratch code</h2>
                 </div>
-                <div class="authentication_code_section">
+                <div class="authentication_code_section"data-scroll>
                     <div class="code_section_bg">
                         <img class="lines_img" src="img/6slanting_lines.svg" alt="Star Image">
                         <img class="star_img" src="img/auth_star.svg" alt="Star Image">
@@ -106,7 +106,7 @@
             </div>
         </section>
         <section class="how_authenticate">
-            <div class="container">
+            <div class="container" data-scroll>
                 <h2 class="header2">How to Authenticate ?</h2>
                 <div class="steps_to_authenticate">
                     <ul class="steps">

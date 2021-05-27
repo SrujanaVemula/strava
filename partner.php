@@ -37,10 +37,10 @@
         </section>
         <section class="page_desc">
             <div class="container">
-                <p class="body1"><span class="bold">At Advance MuscleMass,</span> we pride ourselves for being pioneers
+                <p class="body1" data-scroll><span class="bold">At Advance MuscleMass,</span> we pride ourselves for being pioneers
                     in manufacturing international-grade nutritional supplements that deliver on your fitness goals as
                     well as fit your budget. Interested in partnering with us? Fill out the form below.</p>
-                <form class="m_form enquiry_form" id="enquiry-form" method="post">
+                <form class="m_form enquiry_form" id="enquiry-form" method="post" data-scroll>
                     <img src="img/home/4slanting_lines.svg" alt="Slanting Lines" class="slanting_lines">
                     <img src="img/plus.svg" alt="Plus" class="plus">
                     <div class="input-field">

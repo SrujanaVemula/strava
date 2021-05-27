@@ -28,7 +28,7 @@
         </section>
         <section class="container">
             <div class="product_desc">
-                <div class="product_images">
+                <div class="product_images" data-scroll>
                     <div class="main_img"><img src="img/product/main_img.png" class="img-responsive"
                             alt="Product 1 Image"></div>
                     <div class="more_product_images">
@@ -50,7 +50,7 @@
                                 alt="Product 5 Image"></div>
                     </div>
                 </div>
-                <div class="product_content">
+                <div class="product_content" data-scroll>
                     <h3 class="product_title">Advance MuscleMass™ Mass Gainer with Digezyme® (Digestive Enzyme Mixer)
                     </h3>
                     <p class="body1 product_content_desc">Proteins and Gainers</p>
@@ -115,7 +115,7 @@
                 </div>
             </div>
         </section>
-        <section class="key_benefits">
+        <section class="key_benefits" data-scroll>
             <div class="radial_overlay"></div>
             <img src="img/vector.png" class="img-responsive vector" alt="Vector Image">
             <img src="img/plus.png" class="img-responsive plus_sign" alt="Plus Sign">
@@ -135,8 +135,8 @@
                 </div>
             </div>
         </section>
-        <section class="container" data-scroll>
-            <div class="frequent">
+        <section class="container">
+            <div class="frequent" data-scroll>
                 <h2 class="section_title">FREQUENTLY<br><span class="transparent_text">BOUGHT TOGETHER</span></h2>
                 <div class="products_list">
                     <div class="section_filter product_width">
@@ -218,7 +218,7 @@
             </div>
         </section>
         <section class="tab_section">
-            <div class="tab">
+            <div class="tab" data-scroll>
                 <div class="tab_item" data-tab="#protein_gainers">
                     <button class="tablinks cmn_btn active"><span class="btn_text">Proteins &
                             Gainers</span></button>
@@ -236,7 +236,7 @@
                     <button class="tablinks cmn_btn"><span class="btn_text">Gym Accessories</span></button>
                 </div>
             </div>
-            <div class="tab_content_wrap">
+            <div class="tab_content_wrap" data-scroll>
                 <div class="container">
                     <div id="protein_gainers" class="tabcontent active">
                         <h3 class="header3 title">About Proteins and Gainers</h3>

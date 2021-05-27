@@ -53,10 +53,10 @@
         <section class="current_openings">
             <div class="container">
                 <img src="img/career_vector.svg" class="career_vector" alt="Career Vector">
-                <p class="openings_desc">With aggressive growth plans on the anvil, we would like to hear from all those
+                <p class="openings_desc" data-scroll>With aggressive growth plans on the anvil, we would like to hear from all those
                     who want to be part of the Fitness Transformation.<br><span class="bold">You can mail your resume on
                         <a href="mailto:careers@advancemusclemass.com">careers@advancemusclemass.com</a></span></p>
-                <div class="opening_dropdown_wrap">
+                <div class="opening_dropdown_wrap" data-scroll>
                     <h4 class="openings_title">Current openings</h4>
                     <div class="filters dropdown_wrap">
                         <div class="black_bg">
@@ -69,7 +69,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="scrollable_table">
+                <div class="scrollable_table" data-scroll>
                     <table class="cmn_table">
                         <tr>
                             <th>Job Title</th>

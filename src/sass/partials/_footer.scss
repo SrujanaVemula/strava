@@ -6,7 +6,20 @@ footer {
     @include sm-down {
         padding: 5%;
     }
-
+.mobile_form{
+    .black_bg {
+        margin-top: 10px;
+        background-color: white;
+        .submit_btn{
+            border-radius: 0;
+            background-color: black;
+            color: white;
+            &:hover{
+                background-color: black;
+            }
+        }
+    }
+}
     .follow_links {
         p {
             color: white;
@@ -48,7 +61,7 @@ footer {
             }
 
             .join_input {
-                width: 35%;
+                width: 30%;
 
                 .join_text {
                     @extend .uppercase;
@@ -56,7 +69,6 @@ footer {
                     line-height: 1;
                     font-family: Chivo_Regular;
                     color: white;
-                    padding-right: 30px;
 
                     @include sm-down {
                         padding-right: 0;
@@ -66,13 +78,13 @@ footer {
             }
 
             .form_input {
-                width: 65%;
+                width: 70%;
+                display: flex;
+
                 .green_btn {
                     width: 100%;
-                    cursor: unset;
-                    padding-left: 30px;
+                    padding-left: 20px;
                     font-family: Chivo_Regular;
-                    text-transform: lowercase;
                     color: #707070;
 
                     &:focus {
@@ -82,6 +94,24 @@ footer {
                     &:hover {
                         background-color: $color_primary;
                         color: #707070;
+                    }
+                }
+
+                .email_text {
+                    cursor: unset;
+                    text-transform: lowercase;
+                    width: 60%;
+                }
+
+                .black_bg {
+                    background-color: white;
+                    width: 35%;
+                    margin-left: auto;
+                    .submit_btn {
+                        background-color: black;
+                        color: white;
+                        cursor: pointer;
+                        padding-left: 0;
                     }
                 }
             }

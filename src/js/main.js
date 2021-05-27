@@ -63,7 +63,10 @@ $(document).ready(function (evt) {
         $(this).parents(".offer_box").css("opacity","0");
     });
 
-    ScrollOut();
+    ScrollOut({
+        once:true,
+        threshold:.2,
+    });
 
     console.log(`window width is ${winW}`);
 

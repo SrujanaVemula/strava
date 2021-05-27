@@ -67,6 +67,7 @@
             </div>
         </section>
     </main>
+    
     <!--  end body content -->
 	<?php include("includes/footer.html") ?>
     <?php include("includes/include_js.html") ?>

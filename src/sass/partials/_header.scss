@@ -50,42 +50,7 @@
             align-items: center;
             justify-content: space-between;
 
-            .search_form {
-                position: relative;
-                width: 400px;
-
-                @include mv-media(992px, 1024px) {
-                    width: 170px;
-                }
-
-                .search_box {
-                    width: 100%;
-                    background-color: transparent;
-                    border-style: unset;
-                    border-bottom: solid 1px white;
-                    color: white;
-                    font-size: 17px;
-                    line-height: 21px;
-                    font-family: Supermolot_Regular;
-                    height: 37px;
-
-                    &:focus {
-                        outline: none;
-                    }
-                }
-
-                .serach_icon {
-                    position: absolute;
-                    right: 0;
-                    bottom: 5px;
-
-                    i {
-                        color: white;
-                    }
-                }
-            }
-
-            .right_header {
+             .right_header {
                 display: flex;
                 align-items: center;
 
@@ -138,11 +103,15 @@
         // z-index: 1;
     }
 
+    .sub_header_inner{
+            display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     .sub_links {
-        padding: 2% 5%;
+        width: 80%;
+        padding: 2% 0;
         display: flex;
         align-items: center;
-        justify-content: space-between;
 
         @include sm-down {
             padding: 2% 0;
@@ -154,10 +123,46 @@
             font-family: Supermolot_Bold;
             text-decoration: none;
             color: black;
+                margin-right: 22px;
 
             @include sm-down {
                 margin: 0 10px;
             }
         }
+    }
+     .search_form {
+                position: relative;
+                width: 20%;
+
+                @include mv-media(992px, 1024px) {
+                    width: 170px;
+                }
+
+                .search_box {
+                    width: 100%;
+                    background-color: transparent;
+                    border-style: unset;
+                    border-bottom: solid 1px black;
+                    color: black;
+                    font-size: 17px;
+                    line-height: 21px;
+                    font-family: Supermolot_Regular;
+                    height: 37px;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .serach_icon {
+                    position: absolute;
+                    right: 0;
+                    bottom: 5px;
+
+                    i {
+                        color: black;
+                    }
+                }
+            }
     }
 }

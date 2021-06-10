@@ -344,7 +344,51 @@ select {
     &.open {
         transform: translateX(0%);
     }
-
+    .sub_accordian{
+        .accordian_item{
+            .accordian_title{
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+                border-bottom: 0 !important;
+                .icon{
+                    img{
+                        width: 5px;
+                    }
+                }
+                a{
+                    font-size: 14px !important;
+                    text-transform: capitalize !important;
+                    font-family: Chivo_Regular !important;
+                }
+            }
+            .accordian_content{
+                padding-left: 20px;
+            }
+            &.active .arrow {
+                display: block;
+                transform: rotate(90deg) translate(30%);
+            }
+        }
+    }
+    .accordian_item{
+        padding-top: 0;
+        .accordian_title{
+            background: none;
+            clip-path: none;
+        }
+        .accordian_content{
+            .dropdown_link{
+                font-size: 14px;
+                text-decoration: none;
+                color: inherit;
+                font-family: Chivo_Regular;
+            }
+        }
+        &.active .plus {
+            display: block;
+            transform: rotate(90deg) translate(30%);
+        }
+    }
     .links {
         display: flex;
         flex-direction: column;
@@ -356,6 +400,9 @@ select {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            .icon{
+                padding-right: 10px;
+            }
 
             i {
                 font-size: 20px;

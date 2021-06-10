@@ -55,17 +55,17 @@ $(document).ready(function (evt) {
     });
 
     // force click on nav-menu when any link is clicked
-    $('.sidebar_wrap .links a').on('click', function () {
+    $('.sidebar_wrap .links .close').on('click', function () {
         $('#nav-icon3').trigger('click');
     });
 
-    $(".white_cancel").click(function(){
-        $(this).parents(".offer_box").css("opacity","0");
+    $(".white_cancel").click(function () {
+        $(this).parents(".offer_box").css("opacity", "0");
     });
 
     ScrollOut({
-        once:true,
-        threshold:.2,
+        once: true,
+        threshold: .2,
     });
 
     console.log(`window width is ${winW}`);
@@ -102,7 +102,26 @@ $(document).ready(function (evt) {
 
     }
 
-    $(".mobile_navbar").css("top","26px");
+    $(".main_link_li").click(function () {
+        $(this).toggleClass("active");
+        $(this).siblings().removeClass("active");
+    })
+
+    $(".dropdown_inside").click(function () {
+        $(".dropdown_inside").removeClass("insideLinkActive");
+        $(this).toggleClass("insideLinkActive");
+    })
+
+    if (winW < 767) {
+        $(".accordian_title").click(function () {
+            $(this).parent().toggleClass("active");
+            $(this).parent().siblings().removeClass("active");
+            $(this).parent().find(".accordian_content").first().slideToggle();
+            $(this).parent().siblings().find(".accordian_content").slideUp();
+        })
+    }
+
+    $(".mobile_navbar").css("top", "26px");
 });
 
 //################################### window load function ##############################################
@@ -121,9 +140,9 @@ $(window).on('scroll', function (e) {
     //<img data-lazy-src="path/to/image" alt="" class="">
     if (winW <= 767) {
         if (scrollTopPos > 100) { // this refers to window
-            $(".mobile_navbar").css("top","0");
-        }else{
-            $(".mobile_navbar").css("top","26px");
+            $(".mobile_navbar").css("top", "0");
+        } else {
+            $(".mobile_navbar").css("top", "26px");
         }
     }
 

@@ -437,12 +437,14 @@
     <?php include("includes/footer.html") ?>
     <?php include("includes/include_js.html") ?>
     <script>
-        $(".accordian_content").first().slideDown();
-        $(".accordian_title").click(function () {
-            $(this).parent().toggleClass("active");
-            $(this).parent().siblings().removeClass("active");
-            $(this).parent().find(".accordian_content").slideToggle();
-            $(this).parent().siblings().find(".accordian_content").slideUp();
+        $("#faq").each(function () {
+            $(".accordian_content").first().slideDown();
+            $(".accordian_title").click(function () {
+                $(this).parent().toggleClass("active");
+                $(this).parent().siblings().removeClass("active");
+                $(this).parent().find(".accordian_content").slideToggle();
+                $(this).parent().siblings().find(".accordian_content").slideUp();
+            })
         })
 
         $('.tab .tab_item').on('click', function () {

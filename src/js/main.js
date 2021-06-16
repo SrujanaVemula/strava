@@ -107,10 +107,10 @@ $(document).ready(function (evt) {
         $(this).siblings().removeClass("active");
     })
 
-    $(".dropdown_inside").click(function () {
-        $(".dropdown_inside").removeClass("insideLinkActive");
-        $(this).toggleClass("insideLinkActive");
-    })
+    // $(".dropdown_inside").click(function () {
+    //     $(".dropdown_inside").removeClass("insideLinkActive");
+    //     $(this).toggleClass("insideLinkActive");
+    // })
 
     if (winW < 767) {
         $(".accordian_title").click(function () {

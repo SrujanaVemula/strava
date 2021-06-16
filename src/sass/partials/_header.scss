@@ -180,19 +180,19 @@
                 padding-top: 3%;
                 padding-bottom: 5%;
                 .dropdown_inside{
-                    // &:hover{
-                    //     .sub_dropdown{
-                    //         display: block;
-                    //     }
-                    // }
-                    &.insideLinkActive{
-                        .inside_link{
-                            color: $color_primary;
-                        }
+                    &:hover{
                         .sub_dropdown{
                             display: block;
                         }
                     }
+                    // &.insideLinkActive{
+                    //     .inside_link{
+                    //         color: $color_primary;
+                    //     }
+                    //     .sub_dropdown{
+                    //         display: block;
+                    //     }
+                    // }
                     .sub_dropdown{
                         display: none;
                         position: absolute;

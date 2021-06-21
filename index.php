@@ -10,6 +10,9 @@
 <!--<![endif]-->
 
 <head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css"
+		integrity="sha512-nIm/JGUwrzblLex/meoxJSPdAKQOe2bLhnrZ81g5Jbh519z8GFJIWu87WAhBH+RAyGbM4+U3S2h+kL5JoV6/wA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<?php include("includes/include_css.html") ?>
 </head>
 
@@ -1154,22 +1157,25 @@
 						<h2 class="section_title">OUR <br><span class="transparent_text">STORY</span></h2>
 					</div>
 					<div class="football_man">
-						<p class="story_desc" data-scroll>Advance MuscleMass started off with one single goal – democratize fitness
-							and make bespoke fitness products accessible to everyone. We’re one of the first Indian
+						<p class="story_desc" data-scroll>Advance MuscleMass started off with one single goal –
+							democratize fitness and make bespoke fitness products accessible to everyone. We’re one of
+							the first Indian
 							players to produce and distribute indigenous fitness supplements, manufactured entirely in
 							India. </p>
 						<div class="main_img" data-scroll>
 							<img src="img/home/man_with_football.jpg" class="img-responsive"
 								alt="Man With Football Image">
 							<div class="overlay"></div>
-							<div class="hover_text">
-								<div><span class="icon"><img src="img/home/play.png" class="img-responsive"
-											alt="Play Image"></span></div>
-								<div class="text">
-									<p>Watch the video</p>
-									<p>1:49 mins</p>
+							<a class="popup-youtube" href="https://www.youtube.com/watch?v=NT0WYNbS_oY?autoplay=1;">
+								<div class="hover_text">
+									<div><span class="icon"><img src="img/home/play.png" class="img-responsive"
+												alt="Play Image"></span></div>
+									<div class="text">
+										<p>Watch the video</p>
+										<p>1:49 mins</p>
+									</div>
 								</div>
-							</div>
+							</a>
 						</div>
 						<img class="plus_sign" src="img/home/transparent_plus.svg" alt="Plus Image">
 						<img class="slanting_lines" src="img/home/slanting_lines.svg" alt="Slanting Lines Image">
@@ -1372,6 +1378,9 @@
 	<!--  end body content -->
 	<?php include("includes/footer.html") ?>
 	<?php include("includes/include_js.html") ?>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"
+		integrity="sha512-+m6t3R87+6LdtYiCzRhC5+E0l4VQ9qIT1H9+t1wmHkMJvvUQNI5MKKb7b08WL4Kgp9K0IBgHDSLCRJk05cFUYg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script>
 		$('.birthright_slider').slick({
 			arrows: true,
@@ -1457,6 +1466,15 @@
 			getParent.find(getTabcontent).addClass('active');
 			$('.product_slider').slick('refresh');
 		})
+
+		$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+			type: 'iframe',
+			mainClass: 'mfp-fade',
+			removalDelay: 160,
+			preloader: false,
+
+			fixedContentPos: false
+		});
 	</script>
 </body>
 

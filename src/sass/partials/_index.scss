@@ -1065,25 +1065,30 @@
                     opacity: 0;
                 }
 
-                .hover_text {
-                    display: flex;
-                    align-items: center;
-                    transition: ease all 300ms;
-                    @extend .rel_xy_center;
-                    opacity: 0;
-                    font-size: 19px;
-                    line-height: 1;
-                    font-family: Supermolot_Regular;
+                .popup-youtube {
+                    text-decoration: none;
                     color: white;
 
-                    .text {
-                        padding-left: 20px;
-                        opacity: .7;
+                    .hover_text {
+                        display: flex;
+                        align-items: center;
+                        transition: ease all 300ms;
+                        @extend .rel_xy_center;
+                        opacity: 0;
+                        font-size: 19px;
+                        line-height: 1;
+                        font-family: Supermolot_Regular;
+                        color: white;
 
-                        p {
-                            font-size: 25px;
-                            line-height: 35px;
-                            font-family: Chivo_Regular;
+                        .text {
+                            padding-left: 20px;
+                            opacity: .7;
+
+                            p {
+                                font-size: 25px;
+                                line-height: 35px;
+                                font-family: Chivo_Regular;
+                            }
                         }
                     }
                 }

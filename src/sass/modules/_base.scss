@@ -510,6 +510,8 @@ select {
     }
 
     input {
+        position: relative;
+        z-index: 1;
         background-color: transparent;
         font-size: 22px;
         line-height: 26px;
@@ -525,7 +527,7 @@ select {
             height: 20px;
         }
 
-        &.valid {
+        &.valid,&.invalid,&:focus {
             ~.placeholder_text {
                 top: -15px;
                 font-size: 16px;
@@ -540,21 +542,11 @@ select {
 
         &:focus {
             outline: none;
-
-            ~.placeholder_text {
-                top: -15px;
-                font-size: 16px;
-                line-height: 18px;
-
-                @include sm-down {
-                    font-size: 14px;
-                    line-height: 16px;
-                }
-            }
         }
     }
 
     .placeholder_text {
+        z-index: 0;
         transition: ease all 300ms;
         font-size: 22px;
         line-height: 26px;
@@ -1423,6 +1415,36 @@ input[type=number] {
     }
 }
 
+//magnific popup css
+/**
+ * Simple fade transition,
+ */
+ .mfp-fade.mfp-bg {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
+}
+
 [data-scroll] {
     transition: all 1s ease-out;
 }
@@ -1436,3 +1458,4 @@ input[type=number] {
     opacity: 0;
     transform: translateY(100px);
 }
+

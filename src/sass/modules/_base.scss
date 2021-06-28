@@ -1285,19 +1285,22 @@ select::-ms-expand {
 
 .slick-dots {
     li {
-        height: 40px;
+        width: 12px;
+        height: 10px;
 
         @include sm-down {
             margin: 0 2px;
         }
 
         button {
+            position: relative;
             &:before {
-                font-size: 16px;
+                font-size: 14px;
                 opacity: 1;
                 transition: ease all 300ms;
                 bottom: 0;
                 top: unset;
+                line-height: 30px;
 
                 @include sm-down {
                     font-size: 14px;
@@ -1315,11 +1318,14 @@ select::-ms-expand {
     .slick-active {
         button {
             &:before {
+                font-size: 0;
+                width: 10px;
                 opacity: 1 !important;
                 color: $color_primary !important;
-                height: 40px;
-                border-radius: 10px;
+                height: 30px;
+                border-radius: 5px;
                 background-color: $color_primary;
+                margin-left: 5px;
             }
         }
     }

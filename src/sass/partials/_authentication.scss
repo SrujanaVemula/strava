@@ -358,6 +358,20 @@
                 display: inline-block;
             }
         }
+        .already_verified{
+            padding-top: 3%;
+
+            .msg {
+                @extend .header2;
+                line-height: 50px;
+                background: $color_primary;
+                padding: 3% 5%;
+                margin-bottom: 5%;
+                @include sm-down{
+                    line-height: 20px;
+                }
+            }
+        }
     }
 
     .how_authenticate {

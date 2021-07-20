@@ -115,6 +115,9 @@
                                         class="green_btn authenticate_again">Authenticate
                                         again</button></div>
                             </div>
+                            <div class="already_verified" id="result3">
+                                <p class="msg">This code is already verified</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,6 +205,7 @@
         document.getElementById("result").style.display = "block";
         document.getElementById("result1").style.display = "none";
         document.getElementById("result2").style.display = "none";
+        document.getElementById("result3").style.display = "none";
         $(".code_form").submit(function (e) {
             e.preventDefault();
             var generated_csrf_token = "FGGUBAVceJNPVuWHVS7QI3dEAyzF8ya1HXuzX4zJyMNPQ4jsV8g1rVy5OxpXtojm";
@@ -226,7 +230,7 @@
                 },
                 dataType: 'json',
                 success: function (data) {
-                    console.log(data)
+                    console.log(data.message)
                     if (data.status == 1) {
                         // $('#msg1').html(data.message);
                         $('.product_name').html(data.product_name);
@@ -234,14 +238,23 @@
                         $('.batch_number').html(data.batch_no);
                         $('.manufacture_date').html(data.date_of_manufacture);
                         // $('#msg6').html(data.purchase_from);
-                        document.getElementById("result1").style.display = "block";
-                        document.getElementById("result").style.display = "none";
-                        document.getElementById("result2").style.display = "none";
+                        if (data.message == "Product Already Verified") {
+                            document.getElementById("result1").style.display = "none";
+                            document.getElementById("result").style.display = "none";
+                            document.getElementById("result2").style.display = "none";
+                            document.getElementById("result3").style.display = "block";
+                        } else {
+                            document.getElementById("result1").style.display = "block";
+                            document.getElementById("result").style.display = "none";
+                            document.getElementById("result2").style.display = "none";
+                            document.getElementById("result3").style.display = "none";
+                        }
                     } else {
                         $('#msg7').html(data.message);
                         document.getElementById("result2").style.display = "block";
                         document.getElementById("result1").style.display = "none";
                         document.getElementById("result").style.display = "none";
+                        document.getElementById("result3").style.display = "none";
                     }
                 }
             });
@@ -251,6 +264,7 @@
             document.getElementById("result").style.display = "block";
             document.getElementById("result1").style.display = "none";
             document.getElementById("result2").style.display = "none";
+            document.getElementById("result3").style.display = "none";
         })
     </script>
 </body>

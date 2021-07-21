@@ -76,8 +76,8 @@
                                 </form>
                             </div>
                             <div class="congratulations" id="result1">
-                                <p class="congartulations_msg">Congratulations your product with code MNXXV4RK is
-                                    authenticated successfully.<br><a
+                                <p class="congartulations_msg">Congratulations your product with code <span
+                                        class="product_code_text"></span> is authenticated successfully.<br><a
                                         href="http://www.advancemusclemass.com/">www.advancemusclemass.com</a></p>
                                 <div class="product_detail">
                                     <div class="product_detail_text">
@@ -102,8 +102,8 @@
                                         again</button></div>
                             </div>
                             <div class="error" id="result2">
-                                <p class="error_msg">Sorry!!! your product with code MNXXV4RK is already verified or
-                                    invalid. For any query, Please contact to our customer care number <a
+                                <p class="error_msg">Sorry!!! your product with code <span class="product_code_text"></span>
+                                    is invalid. For any query, Please contact to our customer care number <a
                                         href="tel:917698430406">+91 7698430406</a></p>
                                 <div class="product_detail">
                                     <p class="product_detail_text">If Problem in authentication please call on our
@@ -117,6 +117,9 @@
                             </div>
                             <div class="already_verified" id="result3">
                                 <p class="msg">This code is already verified</p>
+                                <div class="text-center btn_div"><button
+                                        class="green_btn authenticate_again">Authenticate
+                                        again</button></div>
                             </div>
                         </div>
                     </div>
@@ -207,58 +210,61 @@
         document.getElementById("result2").style.display = "none";
         document.getElementById("result3").style.display = "none";
         $(".code_form").submit(function (e) {
-            e.preventDefault();
-            var generated_csrf_token = "FGGUBAVceJNPVuWHVS7QI3dEAyzF8ya1HXuzX4zJyMNPQ4jsV8g1rVy5OxpXtojm";
-            var code = $(".code").val() + $(".code1").val() + $(".code2").val() + $(".code3").val() + $(
-                ".code4").val() + $(".code5").val() + $(".code6").val() + $(".code7").val();
-            var mobile_no = $("#mobile_no").val();
-            var email_id = $("#email_id").val();
-            var purchased_from = $("#purchased_from").val();
-            var product_unique_code = code;
-            console.log(product_unique_code);
-            $.ajax({
-                url: "https://stravakart.pythonanywhere.com/verify_product",
-                type: 'POST',
-                headers: {
-                    'X-CSRFToken': generated_csrf_token
-                },
-                data: {
-                    'mobile_no': mobile_no,
-                    'email_id': email_id,
-                    'purchased_from': purchased_from,
-                    'product_unique_code': product_unique_code
-                },
-                dataType: 'json',
-                success: function (data) {
-                    console.log(data.message)
-                    if (data.status == 1) {
-                        // $('#msg1').html(data.message);
-                        $('.product_name').html(data.product_name);
-                        $('.product_code').html(data.product_code);
-                        $('.batch_number').html(data.batch_no);
-                        $('.manufacture_date').html(data.date_of_manufacture);
-                        // $('#msg6').html(data.purchase_from);
-                        if (data.message == "Product Already Verified") {
+            if ($(this).valid()) {
+                e.preventDefault();
+                var generated_csrf_token = "FGGUBAVceJNPVuWHVS7QI3dEAyzF8ya1HXuzX4zJyMNPQ4jsV8g1rVy5OxpXtojm";
+                var code = $(".code").val() + $(".code1").val() + $(".code2").val() + $(".code3").val() + $(
+                    ".code4").val() + $(".code5").val() + $(".code6").val() + $(".code7").val();
+                var mobile_no = $("#mobile_no").val();
+                var email_id = $("#email_id").val();
+                var purchased_from = $("#purchased_from").val();
+                var product_unique_code = code;
+                console.log(product_unique_code);
+                $('.product_code_text').html(product_unique_code);
+                $.ajax({
+                    url: "https://stravakart.pythonanywhere.com/verify_product",
+                    type: 'POST',
+                    headers: {
+                        'X-CSRFToken': generated_csrf_token
+                    },
+                    data: {
+                        'mobile_no': mobile_no,
+                        'email_id': email_id,
+                        'purchased_from': purchased_from,
+                        'product_unique_code': product_unique_code
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data.message)
+                        if (data.status == 1) {
+                            // $('#msg1').html(data.message);
+                            $('.product_name').html(data.product_name);
+                            $('.product_code').html(data.product_code);
+                            $('.batch_number').html(data.batch_no);
+                            $('.manufacture_date').html(data.date_of_manufacture);
+                            // $('#msg6').html(data.purchase_from);
+                            if (data.message == "Product Already Verified") {
+                                document.getElementById("result1").style.display = "none";
+                                document.getElementById("result").style.display = "none";
+                                document.getElementById("result2").style.display = "none";
+                                document.getElementById("result3").style.display = "block";
+                            } else {
+                                document.getElementById("result1").style.display = "block";
+                                document.getElementById("result").style.display = "none";
+                                document.getElementById("result2").style.display = "none";
+                                document.getElementById("result3").style.display = "none";
+                            }
+                        } else {
+                            $('#msg7').html(data.message);
+                            document.getElementById("result2").style.display = "block";
                             document.getElementById("result1").style.display = "none";
                             document.getElementById("result").style.display = "none";
-                            document.getElementById("result2").style.display = "none";
-                            document.getElementById("result3").style.display = "block";
-                        } else {
-                            document.getElementById("result1").style.display = "block";
-                            document.getElementById("result").style.display = "none";
-                            document.getElementById("result2").style.display = "none";
                             document.getElementById("result3").style.display = "none";
                         }
-                    } else {
-                        $('#msg7').html(data.message);
-                        document.getElementById("result2").style.display = "block";
-                        document.getElementById("result1").style.display = "none";
-                        document.getElementById("result").style.display = "none";
-                        document.getElementById("result3").style.display = "none";
                     }
-                }
-            });
-            $(this).closest('form').find("input[type=text],input[type=email], select, number").val("");
+                });
+                $(this).closest('form').find("input[type=text],input[type=email], select, number").val("");
+            }
         });
         $(".authenticate_again").click(function () {
             document.getElementById("result").style.display = "block";

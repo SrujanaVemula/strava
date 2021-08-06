@@ -40,14 +40,14 @@
                                 <p class="enter_text">ENTER UNIQUE CODE</p>
                                 <form action="" class="code_form" autocomplete="off" novalidate>
                                     <div class="code_input">
-                                        <input name="code" class="code" maxlength="1" />
-                                        <input name="code" class="code1" maxlength="1" />
-                                        <input name="code" class="code2" maxlength="1" />
-                                        <input name="code" class="code3" maxlength="1" />
-                                        <input name="code" class="code4" maxlength="1" />
-                                        <input name="code" class="code5" maxlength="1" />
-                                        <input name="code" class="code6" maxlength="1" />
-                                        <input name="code" class="code7" maxlength="1" />
+                                        <input type="text" name="code" class="code" maxlength="1" />
+                                        <input type="text" name="code" class="code1" maxlength="1" />
+                                        <input type="text" name="code" class="code2" maxlength="1" />
+                                        <input type="text" name="code" class="code3" maxlength="1" />
+                                        <input type="text" name="code" class="code4" maxlength="1" />
+                                        <input type="text" name="code" class="code5" maxlength="1" />
+                                        <input type="text" name="code" class="code6" maxlength="1" />
+                                        <input type="text" name="code" class="code7" maxlength="1" />
                                     </div>
                                     <div class="input_wrap">
                                         <div class="input-field">
@@ -235,7 +235,7 @@
                     },
                     dataType: 'json',
                     success: function (data) {
-                        console.log(data.message)
+                        console.log(data)
                         if (data.status == 1) {
                             // $('#msg1').html(data.message);
                             $('.product_name').html(data.product_name);
@@ -263,7 +263,7 @@
                         }
                     }
                 });
-                $(this).closest('form').find("input[type=text],input[type=email], select, number").val("");
+                $(this).closest('form').find("input[type=text],input[type=email], select, input[type=number]").val("");
             }
         });
         $(".authenticate_again").click(function () {

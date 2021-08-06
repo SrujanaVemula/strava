@@ -263,7 +263,7 @@
                         }
                     }
                 });
-                $(this).closest('form').find("input[type=text],input[type=email], select, input[type=number]").val("");
+                $(".code_form")[0].reset();
             }
         });
         $(".authenticate_again").click(function () {

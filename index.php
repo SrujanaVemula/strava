@@ -289,6 +289,7 @@
 											</div>
 										</div>
 									</div>
+									
 									<div class="section_filter product_width">
 										<div class="section_clip">
 											<div class="product_item">
